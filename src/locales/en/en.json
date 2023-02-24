@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "aboutCompany": "About company",
+    "services": "Services",
+    "ourJob": "Our job",
+    "reference": "References",
+    "career": "Career",
+    "contacts": "Contacts"
+  },
+  "homeLogoList": {
+    "ourClients": "Naši klienti"
+  },
+  "homeCallUs": {
+    "callUs": "Ozvěte se nám",
+    "billingInformation": "Fakturační údaje",
+    "billingInformationData": "IČ: 123123123, DIČ: CZ12312312312, Datová schránka? Abcdef12g, Bankovní spojení: 123 456 789 / 0000 (MB) Spisová značka: A 123 45 vedená u rejstříkového soudu v Praze",
+    "branches": "Pobočky",
+    "career": "Kariéra",
+    "contacts": "Kontakty",
+    "text": "Maecenas at nulla dignissim nunc porttitor blandit et hendrerit quam. Quisque tincidunt risus id ipsum mattis, a sodales ante rutrum."
+  },
+  "homeFooter": {
+    "headquarters": "Sídlo společnosti",
+    "contact": "Kontakt",
+    "officeHours": "Pondělí - Pátek: 8-17 hod.",
+    "text": "Maecenas at nulla dignissim nunc porttitor blandit et hendrerit quam. Quisque tincidunt risus id ipsum mattis, a sodales ante rutrum."
+  }
+}

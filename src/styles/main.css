@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#mapBox-NS {
+    width: 100%;
+    height: 500px;
+}
+.mapboxgl-control-container {
+    display: none;
+}
+
+#contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1280px 1fr;
+    grid-template-rows: 40px 520px 40px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    #contact-mapBox { grid-area: 2 / 1 / 3 / 4; }
+    #contact-form { grid-area: 1 / 2 / 4 / 3; }
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}

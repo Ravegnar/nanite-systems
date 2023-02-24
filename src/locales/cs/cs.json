@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "aboutCompany": "O firmě",
+    "services": "Služby",
+    "ourJob": "Naše práce",
+    "reference": "Reference",
+    "career": "Kariéra",
+    "contacts": "Kontakty"
+  },
+  "services": {
+    "label": "Služby",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugiat, aliquam nulla magnam adipisci mollitia quibusdam voluptatem? Incidunt aliquam adipisci est autem molestias rerum vel quos perferendis sint dolores corporis assumenda at numquam, consectetur dicta! Distinctio quaerat repudiandae assumenda quam. Beatae ad nihil obcaecati omnis maiores deserunt! Reprehenderit quaerat tempore dolore officiis molestiae, at velit ducimus alias delectus culpa inventore.",
+    "cardOneName": "Card",
+    "cardOneText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "cardTwoName": "Card",
+    "cardTwoText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "cardThreeName": "Card",
+    "cardThreeText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "cardFourName": "Card",
+    "cardFourText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "cardFiveName": "Card",
+    "cardFiveText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "cardSixName": "Card",
+    "cardSixText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat."
+  },
+  "aboutUs": {
+    "label": "O nás",
+    "title": "O nás",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi necessitatibus ipsa, repellendus reprehenderit tempora nesciunt nam minus sunt dolore totam id iure quaerat! Deleniti earum tenetur nobis sapiente illum deserunt obcaecati accusantium commodi rerum repellendus sint ipsa, assumenda, voluptas eius nemo non molestias delectus minus dignissimos incidunt consectetur facere. Dolores!",
+    "subtitle1": "XXXXX",
+    "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "subtitle2": "XXXXX",
+    "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "subtitle3": "XXXXX",
+    "text3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat."
+  },
+  "references": {
+    "label": "Reviews",
+    "title": "O nás",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi necessitatibus ipsa, repellendus reprehenderit tempora nesciunt nam minus sunt dolore totam id iure quaerat! Deleniti earum tenetur nobis sapiente illum deserunt obcaecati accusantium commodi rerum repellendus sint ipsa, assumenda, voluptas eius nemo non molestias delectus minus dignissimos incidunt consectetur facere. Dolores!",
+    "subtitle1": "XXXXX",
+    "text1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "subtitle2": "XXXXX",
+    "text2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat.",
+    "subtitle3": "XXXXX",
+    "text3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt at officiis earum doloribus repellat."
+  },
+  "clients": {
+    "label": "Klienti",
+    "title": "O nás",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi necessitatibus ipsa, repellendus reprehenderit tempora nesciunt nam minus sunt dolore totam id iure quaerat! Deleniti earum tenetur nobis sapiente illum deserunt obcaecati accusantium commodi rerum repellendus sint ipsa, assumenda, voluptas eius nemo non molestias delectus minus dignissimos incidunt consectetur facere. Dolores!",
+    "subtitle1": "XXXXX"
+  },
+  "contacts": {
+    "label": "Kontakt",
+    "title": "Napište nám",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi necessitatibus ipsa, repellendus reprehenderit tempora nesciunt nam minus sunt dolore totam id iure quaerat! Deleniti earum tenetur nobis sapiente illum deserunt obcaecati accusantium commodi rerum repellendus sint ipsa, assumenda, voluptas eius nemo non molestias delectus minus dignissimos incidunt consectetur facere. Dolores!",
+    "subtitle1": "XXXXX"
+  }
+}
