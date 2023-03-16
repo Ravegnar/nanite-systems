@@ -13,7 +13,7 @@ const AboutUs = () => {
         <div className="h-[460px] bg-aboutUs bg-cover bg-center">
           asdad
         </div>
-        <div className="w-full bg-black">
+        <div className="w-full bg-slate-900">
           <div className="max-w-[640px] text-start pl-12 pr-6 py-8">
             <Typography text={t('aboutUs.title')} className="" variant='h3' />
             <Typography text={t('aboutUs.text')} className="mt-3" variant='subtitle1' />

@@ -24,7 +24,7 @@ export const Card = (props: IServicesCards) => {
   }
 
   return (
-    <div className="flex flex-col items-center bg-black px-6 py-12">
+    <div className="flex flex-col items-center bg-slate-900 px-6 py-12">
       <div className="icon">
         {cardIcon[icon]}
       </div>

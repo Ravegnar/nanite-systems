@@ -12,10 +12,10 @@ const Contacts = () => {
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
 
       <div id='contact-section' className="rotate-180 mt-10">
-        <div id='contact-mapBox' className="rotate-180 contrast-[1.3] py-10 bg-black">
+        <div id='contact-mapBox' className="rotate-180 contrast-[1.3] py-10 bg-slate-900">
           <MabBox />
         </div>
-        <div id='contact-form' className="max-w-sm bg-gray-800 rotate-180">
+        <div id='contact-form' className="max-w-sm bg-black border-2 border-orange-500XXX rotate-180">
           <ContactForm />
         </div>
       </div>

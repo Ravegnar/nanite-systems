@@ -14,7 +14,12 @@ module.exports = {
       aboutUs: 'url(/images/C1.png)',
       logo: 'url(/images/NS.png)',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'orbitron': ['Orbitron', 'sans-serif'],
+        'tomorrow': ['Tomorrow', 'sans-serif'],
+      },
+    }
   },
   plugins: [],
 }
