@@ -24,8 +24,8 @@ const MabBox = () => {
       <Marker longitude={-118.15937045855739} latitude={33.919123017099594}>
         <Image src="/images/NS.png" alt="NS.png" width={0} height={0} />
         <span id="mapBox-marker" className="h-5 w-5 flex items-center justify-center rotate-45 cursor-pointer">
-          <span className="absolute h-5 w-5 animate-ping bg-orange-400 opacity-75" />
-          <span className="h-4 w-4 bg-orange-500 opacity-90" />
+          <span className="absolute h-5 w-5 animate-ping bg-orange-500 opacity-75" />
+          <span className="h-4 w-4 bg-orange-600 opacity-90" />
         </span>
       </Marker>
     </Map>

@@ -9,9 +9,6 @@ const Services = () => {
   return (
     <div id="services" className="w-full text-center mx-auto pt-20 relative -mt-96">
       <Typography text={t('services.label')} className="" variant='h3' />
-      <div className="font-orbitron text-4xl">ccc0214+ěščřžýáíésadfghjklk,mnbvcxyftztz</div>
-      <div className="font-tomorrow text-4xl">ccc0214+ěščřžýáíésadfghjklk,mnbvcxyftztz</div>
-      <div className="text-4xl">ccc0214+ěščřžýáíésadfghjklk,mnbvcxyftztz</div>
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
       <div className="max-w-7xl mx-auto mt-10">
       <Typography text={t('services.text')} className="" variant='subtitle1' />
