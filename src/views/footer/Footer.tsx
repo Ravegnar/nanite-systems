@@ -37,7 +37,7 @@ const Footer = () => {
 									</a>
 									<a
 										href={`tel:${(appConfig.phone).replaceAll(" ","")}`}
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2"
+										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.phone}
 									</a>
@@ -51,7 +51,7 @@ const Footer = () => {
 									</a>
 									<a
 										href={`mailto:${appConfig.email}`}
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2"
+										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.email}
 									</a>
@@ -61,17 +61,17 @@ const Footer = () => {
 							<div className="h-6 flex items-center mt-2">
 								<div className="group flex items-center">
 									<a
-										href={`https://www.${appConfig.web}`}
+										href={"https://www." + appConfig.web}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<Icon type="Earth" size={26} className="text-orange-600 group-hover:animate-pulse group-hover:scale-125 transform duration-200 ease-in-out mr-4" />
+										<Icon type="Earth" size={26} className="text-orange-600 group-hover:animate-pulse group-hover:scale-125 transform duration-200 ease-in-out mr-[14px]" />
 									</a>
 									<a
-										href={`https://www.${appConfig.web}`}
+										href={"https://www." + appConfig.web}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2"
+										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.web}
 									</a>
@@ -81,7 +81,7 @@ const Footer = () => {
 						</div>
 					</div>
 					<Typography text={"Follow us"} className="text-center text-orange-600 mt-8" variant='h3' />
-					<div className="flex gap-2 items-center mx-auto mt-6">
+					<div className="flex gap-2 items-center mx-auto mt-10">
 						{followUsList.map((followUs: IFollowUsList) => (
 							<a
 								key={followUs.type}
@@ -95,8 +95,16 @@ const Footer = () => {
 						))}
 					</div>
 				</div>
-				<div className="text-center border-t-2 border-gray-200 py-5 mt-10">
-					<Typography text={"Copyright ©2023 Design by Lukas Navratil"} variant='subtitle1' />
+				<div className="flex justify-center text-center border-t-2 border-gray-200 py-5 mx-2 mt-10">
+					<Typography text={"Copyright ©2023 Design and created by"} variant='subtitle1' />
+					<a
+						href={"https://www." + appConfig.web}
+						target="_blank"
+						rel="noopener noreferrer"
+						className=""
+					>
+						<Typography text={"Lukáš Navrátil"} variant='subtitle1' className='text-orange-600 hover:underline pl-1' />
+					</a>
 				</div>
 			</div>
 		</div>

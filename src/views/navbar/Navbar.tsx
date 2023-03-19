@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="my-auto">
         {appConfig.appName}
       </div>
-      <div className='flex items-center'>
+      <div className='flex items-center bg-zinc-600/25'>
         {menuItems.map(item => {
           return (
             <NavLink

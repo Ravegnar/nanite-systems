@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Tomorrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Tomorrow:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,23 @@
     html {
         font-family: 'Tomorrow', sans-serif;
     }
+}
+
+#XXX-NS {
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#XXX
+{
+  text-shadow: 0 0 3px black;
+  -moz-text-shadow: 0 0 3px black;
+  -webkit-text-shadow: 0 0 3px black;
+  text-shadow: 0 0 6px black;
+  -moz-text-shadow: 0 0 6px black;
+  -webkit-text-shadow: 0 0 6px black;
+  text-shadow: 0 0 12px black;
+  -moz-text-shadow: 0 0 12px black;
+  -webkit-text-shadow: 0 0 12px black;
 }
 
 #mapBox-NS {
