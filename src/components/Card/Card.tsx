@@ -18,9 +18,9 @@ export const Card = (props: IServicesCards) => {
   const iconClasses = ''
 
   const cardIcon: CardIcon = {
-    fire: <IconBook size={20} className={iconClasses} />,
-    water: <IconBook size={20} className={iconClasses} />,
-    sunSnowflake: <IconBook size={20} className={iconClasses} />,
+    fire: <IconBook size={20} className={iconClasses} type={'Book'} />,
+    water: <IconBook size={20} className={iconClasses} type={'Book'} />,
+    sunSnowflake: <IconBook size={20} className={iconClasses} type={'Book'} />,
   }
 
   return (
