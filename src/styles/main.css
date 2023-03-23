@@ -10,6 +10,20 @@
     }
 }
 
+
+
+
+.striped {
+    background: repeating-linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 2px,
+      rgba(0, 0, 0, 0.3) 2px,
+      rgba(0, 0, 0, 0.3) 4px
+    )
+}
+
+
+
 #XXX-NS {
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }

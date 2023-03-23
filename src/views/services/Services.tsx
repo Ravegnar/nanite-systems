@@ -4,6 +4,7 @@ import servicesCards from '@/lib/servicesCards'
 import Typography from '@/components/Typography/Typography'
 import Card from '@/components/Card/Card'
 import Count from '@/components/Count/Count'
+import Chart from '@/components/Chart/Chart'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -54,13 +55,22 @@ const Services = () => {
       </div>
       <div ref={targetRef} className="flex justify-center">
         <Count
-          number={1010}
-          duration={4}
+          start={1963}
+          end={2010}
+          duration={400}
           text={"Něco"}
           isPlus={true}
           isVisiable={isVisible}
         />
       </div>
+      <div className="h-96 flex justify-center">
+        <Chart />
+      </div>
+      <div className="exp-kurz w-28 h-36 after:content-[''] after:ml-0.5 after:bg-white after:w-20 after:bg-headerBg after:absolute after:h-60 after:text-red-500">
+        asdas
+      </div>
+      <div className="relative w-96 h-96 bg-orange-600">
+      <svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='8' height='8' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M0 10h20z'   stroke-width='7.5' stroke='hsla(259, 0%, 0%, 0.34)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-40,-160)' fill='url(#a)'/></svg>      </div>
     </div>
   )
 }

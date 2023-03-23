@@ -13,6 +13,7 @@ const Header = () => {
           </span>
         </div>
       </div>
+      <div className="h-96 bg-white"></div>
     </header>
   )
 }

@@ -80,22 +80,22 @@ const Footer = () => {
 
 						</div>
 					</div>
-					<Typography text={"Follow us"} className="text-center text-orange-600 mt-8" variant='h3' />
-					<div className="flex gap-2 items-center mx-auto mt-10">
+					<Typography text={"Follow us"} className="text-center text-orange-600 mt-14" variant='h3' />
+					<div className="flex gap-2 items-center mx-auto mt-8">
 						{followUsList.map((followUs: IFollowUsList) => (
 							<a
 								key={followUs.type}
 								href={followUs.href}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="group w-11 h-11 flex items-center justify-center border-4 border-orange-600 scale-90 hover:bg-orange-600 hover:scale-110 hover:animate-pulse transform duration-300 ease-in-out rotate-45 mx-2"
+								className="group striped w-11 h-11 flex items-center justify-center border-4 border-orange-600 scale-90 hover:bg-orange-600 hover:scale-110 hover:animate-pulse transform duration-300 ease-in-out rotate-45 mx-2"
 							>
 								<Icon type={followUs.type} size={followUs.size} className="-rotate-45 scale-[0.8] group-hover:scale-[1.2] group-hover:text-black" />
 							</a>
 						))}
 					</div>
 				</div>
-				<div className="flex justify-center text-center border-t-2 border-gray-200 py-5 mx-2 mt-10">
+				<div className="flex justify-center text-center border-t-2 border-zinc-600 py-5 mx-2 mt-10">
 					<Typography text={"Copyright ©2023 Design and created by"} variant='subtitle1' />
 					<a
 						href={"https://www." + appConfig.web}

@@ -2,8 +2,9 @@ import Typography from '@/components/Typography/Typography'
 import CountUp from 'react-countup';
 
 interface ICountProps {
-  number: number
+  end: number
   duration: number
+  start?: number
   className?: string
   text?: string
   isVisiable?: boolean
@@ -13,8 +14,9 @@ interface ICountProps {
 const Count = (props: ICountProps) => {
   // props
   const {
-    number,
+    end,
     duration,
+    start = 0,
     className,
     text,
     isVisiable = true,
@@ -26,7 +28,8 @@ const Count = (props: ICountProps) => {
       {isVisiable && (
         <div className="flex justify-center font-orbitron">
           <CountUp
-            end={number}
+            start={start}
+            end={end}
             duration={duration}
           />
           {isPlus && '+'}
