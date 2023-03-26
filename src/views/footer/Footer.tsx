@@ -88,7 +88,11 @@ const Footer = () => {
 								href={followUs.href}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="group striped w-11 h-11 flex items-center justify-center border-4 border-orange-600 scale-90 hover:bg-orange-600 hover:scale-110 hover:animate-pulse transform duration-300 ease-in-out rotate-45 mx-2"
+								className="
+									group w-11 h-11 flex items-center justify-center border-4 scale-90 border-cyan-500 rotate-45 mx-2
+									hover:bg-cyan-500 hover:scale-110 hover:animate-pulse transform duration-300 ease-in-out
+									dark:hover:bg-orange-600 dark:border-orange-600
+								"
 							>
 								<Icon type={followUs.type} size={followUs.size} className="-rotate-45 scale-[0.8] group-hover:scale-[1.2] group-hover:text-black" />
 							</a>
@@ -103,7 +107,7 @@ const Footer = () => {
 						rel="noopener noreferrer"
 						className=""
 					>
-						<Typography text={"Lukáš Navrátil"} variant='subtitle1' className='text-orange-600 hover:underline pl-1' />
+						<Typography text={"Lukáš Navrátil"} variant='subtitle1' className='text-orange-600 hover:text-orange-700 hover:underline pl-1' />
 					</a>
 				</div>
 			</div>

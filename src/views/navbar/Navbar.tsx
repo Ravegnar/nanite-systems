@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AppContext } from '@/providers/app.provider'
 import menuItems from '@/lib/menuItems'
@@ -7,6 +7,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import appConfig from '@/config/app.config'
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
   const { setSelectTab } = useContext(AppContext)
   const { t } = useTranslation()
 
@@ -17,6 +18,16 @@ const Navbar = () => {
     const width = event.currentTarget.getBoundingClientRect().width
     liner.current.style.left = (left - 8) + 'px';
     liner.current.style.width = (width + 16) + 'px';
+  }
+
+
+
+
+
+// XXX toggle button
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+    setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
@@ -43,6 +54,11 @@ const Navbar = () => {
         />
         <LanguageSwitcher />
       </div>
+
+      <button id="toggle" onClick={() => toggleTheme()} className="bg-white dark:bg-slate-800 text-black dark:text-white py-2 px-4 rounded">
+        Přepnout Dark Mode
+      </button>
+ 
     </nav>
   )
 }

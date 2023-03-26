@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: 'class',
 	content: [
 		"./app/**/*.{js,ts,jsx,tsx}",
 		"./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,7 +11,9 @@ module.exports = {
 	],
 	theme: {
 		backgroundImage: {
-			headerBg: 'url(/images/B2.png)',
+			//A6 B2
+			headerBg: 'url(/images/A6.png)',
+			headerBgDark: 'url(/images/B2.png)',
 			aboutUs: 'url(/images/C1.png)',
 			logo: 'url(/images/NS.png)',
 		},
