@@ -60,7 +60,7 @@
 #contact-section {
     display: grid;
     grid-template-columns: 1fr 1280px 1fr;
-    grid-template-rows: 40px 520px 40px;
+    grid-template-rows: 40px 600px 40px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }

@@ -5,12 +5,15 @@ import Typography from '@/components/Typography/Typography'
 import Card from '@/components/Card/Card'
 import Count from '@/components/Count/Count'
 import Chart from '@/components/Chart/Chart'
+import Modal from '@/components/Modal/Modal'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [showModal, setShowModal] = useState<boolean>(false)
   const targetRef: any = useRef(null)
 
   const { t } = useTranslation()
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,8 +38,30 @@ const Services = () => {
     }
   }, [])
 
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+
   return (
     <div id="services" className="w-full text-center mx-auto pt-20 relative XXX-mt-96">
+
+      <button type="button" className="bg-black p-4" onClick={openModal}>
+        Show modal
+      </button>
+      {showModal &&
+        <Modal
+          onClose={closeModal}
+          textHeader ="Lorem, ipsum dolor!"
+          textBody = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio earum, officiis beatae nostrum magni soluta culpa similique, labore quis quisquam repudiandae dolor officia ratione magnam. Ratione deserunt vitae eius ipsam!"
+        />
+      }
+
       <Typography text={t('services.label')} className="" variant='h3' />
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
       <div className="max-w-7xl mx-auto mt-10">

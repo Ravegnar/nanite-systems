@@ -22,6 +22,14 @@ module.exports = {
 				'orbitron': ['Orbitron', 'sans-serif'],
 				'tomorrow': ['Tomorrow', 'sans-serif'],
 			},
+			keyframes: {
+			  blink: {
+				'50%': { opacity: '0.3' },
+			  }
+			},
+			animation: {
+			  blink: 'blink 0.3s ease-in-out infinite',
+			}
 		}
 	},
 	plugins: [],
