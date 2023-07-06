@@ -23,12 +23,17 @@ module.exports = {
 				'tomorrow': ['Tomorrow', 'sans-serif'],
 			},
 			keyframes: {
-			  blink: {
-				'50%': { opacity: '0.3' },
-			  }
+			 	blink: {
+					'50%': { opacity: '0.3' },
+			  	},
+				fadeOut: {
+					'0%': { opacity: '0.75' },
+					'100%': { opacity: '0' },
+				}
 			},
 			animation: {
-			  blink: 'blink 0.3s ease-in-out infinite',
+			  blink: 'blink 0.25s ease-in-out infinite',
+			  fadeOut: 'fadeOut 0.4s ease-out both'
 			}
 		}
 	},

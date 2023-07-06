@@ -11,6 +11,9 @@ interface IconTypes {
 		| "LinkedIn"
 		| "Banner"
 		| "Marker"
+		| "CloseCircle"
+		| "CloseSquare"
+		| "Close"
 	className?: string
 	size?: number
 }
