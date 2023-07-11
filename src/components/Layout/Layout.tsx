@@ -1,4 +1,5 @@
 import Navbar from '@/views/navbar/Navbar';
+import NavbarC from '@/views/navbar copy/Navbar';
 import Header from '@/views/header/Header';
 import AboutUs from '@/views/aboutUs/AboutUs';
 import Services from '@/views/services/Services';
@@ -10,7 +11,8 @@ import Footer from '@/views/footer/Footer';
 export const Layout = () => {
   return (
     <>
-      <Navbar />
+      {/*<Navbar />*/}
+      <NavbarC />
       <div>
         <Header />
       </div>

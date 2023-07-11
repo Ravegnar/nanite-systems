@@ -26,6 +26,17 @@ module.exports = {
 			 	blink: {
 					'50%': { opacity: '0.3' },
 			  	},
+			 	blinkX2: {
+					'0%': { 'width': '0px' },
+					'20%': { 'width': '0px' },
+					'20%': { 'opacity': '1' },
+					'40%': { 'opacity': '0.3' },
+					'55%': { 'width': '100%' },
+					'60%': { 'opacity': '1' },
+					'80%': { 'opacity': '0.3' },
+					'100%': { 'opacity': '1' },
+					'100%': { 'width': '100%' },
+				},
 				fadeOut: {
 					'0%': { opacity: '0.75' },
 					'100%': { opacity: '0' },
@@ -33,6 +44,7 @@ module.exports = {
 			},
 			animation: {
 			  blink: 'blink 0.25s ease-in-out infinite',
+			  blinkX2: 'blinkX2 0.6s ease-in-out both',
 			  fadeOut: 'fadeOut 0.4s ease-out both'
 			}
 		}

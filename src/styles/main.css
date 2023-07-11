@@ -49,6 +49,11 @@
   -webkit-text-shadow: 0 0 12px black;
 }
 
+#liner {
+    background: rgb(8 145 178 / 0.3);
+    background: radial-gradient(circle, rgba(66, 197, 248, 0.425) 0%, rgba(121,179,247,0) 100%);
+}
+
 #mapBox-NS {
     width: 100%;
     height: 500px;
