@@ -59,6 +59,22 @@ const Button = ({
       buttonRef.current.classList.replace("bg-opacity-0", "bg-opacity-60")
       buttonRef.current.classList.remove("text-transparent")
     }, 700);
+
+    setTimeout(() => {
+      buttonRef.current.classList.add("text-transparent")
+    }, 900);
+
+    setTimeout(() => {
+      buttonRef.current.classList.remove("text-transparent")
+    }, 1100);
+
+    setTimeout(() => {
+      buttonRef.current.classList.add("text-transparent")
+    }, 1300);
+
+    setTimeout(() => {
+      buttonRef.current.classList.remove("text-transparent")
+    }, 1500);
   }, [start]);
 
   return <>
@@ -71,9 +87,9 @@ const Button = ({
     >
       {start && <>
         <div
-          id='XXX'
+          id='XXXshadowCss'
           ref={buttonRef}
-          className="bg-white bg-opacity-40 border-b-4 mx-[2px] -skew-x-[45deg] transition-all duration-75 ease-linear animate-blinkX2"
+          className="bg-white bg-opacity-40 border-b-4 mx-[2px] text-transparent -skew-x-[45deg] transition-all duration-75 ease-linear animate-blinkX2"
         >
           <div className="skew-x-[45deg] px-4 py-1">
             {name}
