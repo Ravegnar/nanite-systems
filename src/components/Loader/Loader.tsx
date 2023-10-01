@@ -44,7 +44,6 @@ const Loader = ({
 
 
   useEffect(() => {
-    console.log("Asd")
     if (!c.current) {
       return
     }

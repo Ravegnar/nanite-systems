@@ -14,6 +14,9 @@ interface IconTypes {
 		| "CloseCircle"
 		| "CloseSquare"
 		| "Close"
+		| "Dot"
+		| "Minus"
+		| "Spot"
 	className?: string
 	size?: number
 }

@@ -61,6 +61,15 @@ const Icon = (props: IconTypes) => {
 			viewBox = "0 -960 960 960"
 			path = <path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
 			break
+		case "Dot":
+			path = <path d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z" />
+			break
+		case "Minus":
+			path = <path d="M19,13H5V11H19V13Z" />
+			break
+		case "Spot":
+			path = <path d="M7,10L12,15L17,10H7Z" />
+			break
 	}
 
 	return (
