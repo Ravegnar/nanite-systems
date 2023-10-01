@@ -2,11 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AppContext } from "@/providers/app.provider";
 import menuItems from "@/lib/menuItems";
-import NavLink from "@/components/NavLink/NavLink";
-import Button from "@/components/Button/Button";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
-import appConfig from "@/config/app.config";
-import IMenuItems from "@/types/MenuItems@types";
 import Icon from "@/components/Icons/Icon";
 import Menu from "@/components/Menu/Menu";
 
@@ -105,6 +101,7 @@ const Navbar = () => {
   );
   const compass: any = useRef(null);
   const compassBody: any = useRef(null);
+  const compassWrapper: any = useRef(null);
   const { t } = useTranslation();
 
   const setCompassItemPos = () => {
@@ -113,24 +110,7 @@ const Navbar = () => {
       sectionPos.compass.mid +
       compass.current.scrollLeft;
 
-    console.log(
-      "selectedItem",
-      selectedItem,
-      "itemMidScrollPos",
-      itemMidScrollPos,
-      "scrollPos",
-      scrollPos,
-      "- sectionPos[selectedItem].per",
-      sectionPos[selectedItem].per,
-      "/ sectionPos[selectedItem].differenceP",
-      sectionPos[selectedItem].differenceP,
-      "* sectionPos[selectedItem].difference",
-      sectionPos[selectedItem].difference
-      , ((scrollPos - sectionPos[selectedItem].per) /
-      sectionPos[selectedItem].differenceP) *
-      sectionPos[selectedItem].difference
-    );
-
+      console.log(sectionPos, compass.current.scrollLeft)
     compass.current.scrollLeft =
       itemMidScrollPos +
       ((scrollPos - sectionPos[selectedItem].per) /
@@ -160,6 +140,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!sectionPos) {
+      compass.current.style.width = compassWrapper.current.getBoundingClientRect().width + "px"
       scrollMaxHeight = document.body.scrollHeight - window.innerHeight;
       getSectionPos(scrollMaxHeight);
     }
@@ -185,7 +166,6 @@ const Navbar = () => {
           selectedItem = item;
         }
       });
-      console.clear()
 
       getItemsPos(compass.current, compassBody.current);
       setCompassItemPos();
@@ -201,15 +181,15 @@ const Navbar = () => {
 
   return (
 
-    <nav className="fixed top-0 w-full h-16 z-30 justify-around items-center text-center">
-      <div className="grid grid-cols-[15%_70%_15%] items-center max-w-7xl mx-auto">
-        <div className="flex justify-center items-center h-full">
-          <div className="bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert" />
+    <nav className="fixed top-0 w-full z-30 justify-around items-center text-center">
+      <div className="grid grid-cols-[15%_70%_15%] h-16 items-center max-w-7xl mx-auto">
+        <div className="flex justify-start items-center h-full">
+          <div className="bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-2" />
         </div>
-        <div id="compassWrapper" className="w-full min-h-[40px] lg:max-w-[60%]">
+        <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkXXX">
           <div
             id="compass"
-            className="fixed flex justify-around bg-black/20 w-full min-h-[40px] lg:max-w-[60%] p border-transparent
+            className="fixedX flex justify-around bg-black/30 w-full min-h-[40px] border-transparent
               before:absolute before:top-0 before:left-0 before:w-[10px] before:h-full before:border-4 before:border-r-0
               after:absolute after:top-0 after:right-0 after:w-[10px] after:h-full after:border-4 after:border-l-0"
           >
@@ -221,7 +201,7 @@ const Navbar = () => {
             <div
               id="compassBody"
               ref={compass}
-              className="fixed flex overflow-hidden lg:max-w-[59%] whitespace-nowrapXXX truncate py-1"
+              className="fixed flex overflow-hidden lg:max-w-[69%] truncate py-1"
             >
               <div ref={compassBody} className="flex">
                 {compassItems.map((item, index) => {
@@ -263,17 +243,17 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-around items-center">
+        <div className="flex justify-end items-center">
           <LanguageSwitcher type="icon" />
           <button
             id="toggle"
+            className="p-2"
             onClick={() => toggleTheme()}
-            className="py-2 px-4 rounded"
           >
             <Icon
               type={theme === "dark" ? "Night" : "Day"}
               size={26}
-              className="text-white transition-all transform duration-1000 ease-in mb-1"
+              className="text-white transition-all transform duration-100 ease-in hover:scale-125"
             />
           </button>
           <Menu />

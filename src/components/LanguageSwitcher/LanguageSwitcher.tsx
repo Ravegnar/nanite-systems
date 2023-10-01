@@ -19,7 +19,7 @@ const LanguageSwitcher = ({ styles, type }: ILanguageSwitcherProps) => {
       setLanguage(languages.cs);
     }
   };
-console.log("first")
+
   return (
     <div className="flex items-center">
       <button
@@ -35,7 +35,7 @@ console.log("first")
         onClick={handleChangeLanguage}
       >
         {type ? (
-          <Icon type="Translate" size={26} className={`text-white transition-all transform duration-300 ease-in ${getLanguage === languages.en ? "[transform:rotateY(0.5turn)]" : ""}`} />
+          <Icon type="Translate" size={26} className={`text-white transition-all transform duration-200 ease-in mt-px hover:scale-125 ${getLanguage === languages.en ? "[transform:rotateY(0.5turn)]" : ""}`} />
         ) : (
           <span className="ml-2 ">
             {getLanguage === languages.en ? "czech" : "english"}

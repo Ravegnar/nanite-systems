@@ -17,11 +17,11 @@ export const Menu = () => {
 
   return (
     <>
-      <button onClick={openModal}>
+      <button className="p-2" onClick={openModal}>
         <Icon
           type="Menu"
           size={30}
-          className="text-white transition-all transform duration-1000 ease-in mb-1"
+          className="text-white transition-all transform duration-100 ease-in hover:scale-125"
         />
       </button>
       {showModal && (
