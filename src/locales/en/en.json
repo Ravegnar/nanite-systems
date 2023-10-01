@@ -1,9 +1,10 @@
 {
   "nav": {
-    "aboutCompany": "About company",
+    "aboutUs": "About company",
+    "header": "Introduction",
     "services": "Services",
     "ourJob": "Our job",
-    "reference": "References",
+    "references": "References",
     "career": "Career",
     "contacts": "Contacts"
   },

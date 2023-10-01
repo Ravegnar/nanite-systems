@@ -16,9 +16,10 @@ export const Layout = () => {
       <Navbar />
       <NavbarC />
       <Navbar></Navbar>
+      max-w-7xl mx-auto
     */}
-      <NavbarB />
       <div id='header'>
+        <NavbarB />
         <Header />
       </div>
       <div id='services'>

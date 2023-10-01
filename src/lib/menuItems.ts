@@ -2,10 +2,10 @@ import IMenuItems from '@/types/MenuItems@types'
 
 const menuItems: IMenuItems[] = [
   {
-    key: 'aboutUs',
+    key: 'header',
     tabId: null,
-    name: 'nav.aboutCompany',
-    hashScroll: 'aboutUs',
+    name: 'nav.header',
+    hashScroll: 'header',
   },
   {
     key: 'services',
@@ -14,28 +14,22 @@ const menuItems: IMenuItems[] = [
     hashScroll: 'services',
   },
   {
-    key: 'ourJob',
-    tabId: null,
-    name: 'nav.ourJob',
-    hashScroll: 'ourJob',
+    key: 'aboutUs',
+    tabId: 'aboutUs',
+    name: 'nav.aboutUs',
+    hashScroll: 'aboutUs',
   },
   {
-    key: 'reference',
-    tabId: 'reference',
-    name: 'nav.reference',
-    hashScroll: 'callUs',
-  },
-  {
-    key: 'career',
-    tabId: 'career',
-    name: 'nav.career',
-    hashScroll: 'callUs',
+    key: 'references',
+    tabId: 'references',
+    name: 'nav.references',
+    hashScroll: 'references',
   },
   {
     key: 'contacts',
     tabId: 'contacts',
     name: 'nav.contacts',
-    hashScroll: 'callUs',
+    hashScroll: 'contacts',
   },
 ]
 

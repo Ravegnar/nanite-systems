@@ -1,11 +1,12 @@
 {
   "nav": {
-    "aboutCompany": "O firmě",
+    "aboutUs": "O firmě",
+    "header": "Úvod",
     "services": "Služby",
     "ourJob": "Naše práce",
-    "reference": "Reference",
+    "references": "Reference",
     "career": "Kariéra",
-    "contacts": "Kontakty"
+    "contacts": "Kontakt"
   },
   "services": {
     "label": "Služby",

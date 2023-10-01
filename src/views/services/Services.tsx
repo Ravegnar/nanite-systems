@@ -50,7 +50,7 @@ const Services = () => {
 
 
   return (
-    <div id="services" className="w-full text-center mx-auto pt-20 relative XXX-mt-96">
+    <div className="w-full text-center mx-auto pt-20 relative XXX-mt-96">
       <Loader/>
 
       <button type="button" className="bg-black -mt-96 p-4" onClick={openModal}>

@@ -17,6 +17,12 @@ interface IconTypes {
 		| "Dot"
 		| "Minus"
 		| "Spot"
+		| "Translate"
+		| "DarkMode"
+		| "Night"
+		| "Day"
+		| "MdiSetSquare"
+		| "Menu"
 	className?: string
 	size?: number
 }

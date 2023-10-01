@@ -1,25 +1,27 @@
-import { languages } from '@/lib/languages'
-import { AppContext } from '@/providers/app.provider'
-import { useContext } from 'react'
+import { languages } from "@/lib/languages";
+import { AppContext } from "@/providers/app.provider";
+import { useContext } from "react";
+import Icon from "@/components/Icons/Icon";
 
 interface ILanguageSwitcherProps {
-  styles?: string
+  styles?: string;
+  type?: string;
 }
 
-const LanguageSwitcher = ({ styles }: ILanguageSwitcherProps) => {
+const LanguageSwitcher = ({ styles, type }: ILanguageSwitcherProps) => {
   // context
-  const { getLanguage, setLanguage } = useContext(AppContext)
+  const { getLanguage, setLanguage } = useContext(AppContext);
 
   const handleChangeLanguage = () => {
     if (getLanguage === null || getLanguage === languages.cs) {
-      setLanguage(languages.en)
+      setLanguage(languages.en);
     } else {
-      setLanguage(languages.cs)
+      setLanguage(languages.cs);
     }
-  }
-
+  };
+console.log("first")
   return (
-    <div className="flex items-center ml-auto">
+    <div className="flex items-center">
       <button
         className={`
         flex items-center
@@ -32,12 +34,16 @@ const LanguageSwitcher = ({ styles }: ILanguageSwitcherProps) => {
         `}
         onClick={handleChangeLanguage}
       >
-        <span className="ml-2 ">
-          {getLanguage === languages.en ? 'czech' : 'english'}
-        </span>
+        {type ? (
+          <Icon type="Translate" size={26} className={`text-white transition-all transform duration-300 ease-in ${getLanguage === languages.en ? "[transform:rotateY(0.5turn)]" : ""}`} />
+        ) : (
+          <span className="ml-2 ">
+            {getLanguage === languages.en ? "czech" : "english"}
+          </span>
+        )}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default LanguageSwitcher
+export default LanguageSwitcher;

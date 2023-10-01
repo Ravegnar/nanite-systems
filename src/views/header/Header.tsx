@@ -65,8 +65,8 @@ const Header = () => {
             Corporation
           </span>
         </div>
-        <div className="absolute max-w-7xl flex hidden -bottom-64 left-1/2 -translate-x-1/2 h-96 w-full bg-cyan-700 dark:bg-slate-900 mx-auto">
-          aaaa
+        <div className="absolute max-w-7xl flex hiddenXX -bottom-64 left-1/2 -translate-x-1/2 h-96 w-full bg-cyan-700 dark:bg-slate-900 mx-auto">
+          
         </div>
       </div>
       <canvas

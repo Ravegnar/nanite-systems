@@ -89,10 +89,6 @@ export const Modal = (props: props) => {
   }, [bodyRef]);
 
 
-
-
-
-
   const closeModal = (e: any) => {
     let texters: any = modalRef.current.querySelectorAll(".texter")
     let spaners: any = modalRef.current.querySelectorAll(".modalSpanner")
@@ -158,7 +154,7 @@ export const Modal = (props: props) => {
   return (
     <div
       id='modalOverlay'
-      className="fixed flex top-0 w-screen h-screen z-50 bg-black bg-opacity-20"
+      className="fixed flex top-0 left-0 w-screen h-screen z-50 bg-black bg-opacity-20"
       onClick={(e) => closeModal(e)}
     >
       <div ref={modalRef} className="relative w-full max-w-4xl flex flex-col items-center m-auto">
@@ -174,7 +170,7 @@ export const Modal = (props: props) => {
               <button id='closeButton' type="button" className='absolute top-6 right-6' onClick={(e) => closeModal(null)}>
                 <Icon type="Close" size={30} className="text-white hover:scale-125" />
               </button>
-              <div className="texter h-full flex justify-center items-center text-5xl uppercase p-4">
+              <div className="texter whitespace-normal h-full flex justify-center items-center text-5xl uppercase p-4">
                 {textHeader}
               </div>
             </>}
