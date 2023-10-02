@@ -5,6 +5,7 @@ import menuItems from "@/lib/menuItems";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
 import Icon from "@/components/Icons/Icon";
 import Menu from "@/components/Menu/Menu";
+import Title from "@/components/Title/Title";
 
 const intermediate = ["dot", "dot", "line", "dot", "dot"];
 const endCompassPoint = "nav-line-44";
@@ -95,6 +96,7 @@ const getItemsPos = (compass: any, compassBody: any) => {
 };
 
 const Navbar = () => {
+  const [showContent, setShowContent] = useState(false);
   const { getLanguage, setLanguage } = useContext(AppContext);
   const [theme, setTheme] = useState(
     window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
@@ -184,7 +186,22 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-30 justify-around items-center text-center">
       <div className="grid grid-cols-[15%_70%_15%] h-16 items-center max-w-7xl mx-auto">
         <div className="flex justify-start items-center h-full">
-          <div className="bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-2" />
+
+        <Title text="Toto je tooltip pro element" >
+          <div className="relative bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-2">
+          </div>
+        </Title>
+          
+
+          <div className="relative">
+            <Title text="Toto je tooltip pro element" >
+              <button>Icon</button>
+            </Title>
+          </div>
+
+
+
+
         </div>
         <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkXXX">
           <div

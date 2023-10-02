@@ -29,13 +29,14 @@ const LanguageSwitcher = ({ styles, type }: ILanguageSwitcherProps) => {
         delay-75
         text-gray-200
         hover:text-white
+        hover:scale-125
         p-2
         ${styles}
         `}
         onClick={handleChangeLanguage}
       >
         {type ? (
-          <Icon type="Translate" size={26} className={`text-white transition-all transform duration-200 ease-in mt-px hover:scale-125 ${getLanguage === languages.en ? "[transform:rotateY(0.5turn)]" : ""}`} />
+          <Icon type="Translate" size={26} className={`text-white transition-all transform duration-200 ease-in mt-px ${getLanguage === languages.en ? "[transform:rotateY(0.5turn)]" : ""}`} />
         ) : (
           <span className="ml-2 ">
             {getLanguage === languages.en ? "czech" : "english"}

@@ -88,6 +88,9 @@ const Icon = (props: IconTypes) => {
 		case "Menu":
 			path = <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
 			break
+		case "ArrangeSendBackward":
+			path = <path d="M2,2H16V16H2V2M22,8V22H8V18H18V8H22M4,4V14H14V4H4Z" />
+			break
 	}
 
 	return (

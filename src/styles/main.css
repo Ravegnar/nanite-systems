@@ -203,27 +203,6 @@ body::-webkit-scrollbar-thumb:vertical {
   background-color: #ffffff;
 }
 
-#compassWrapperXXX::before {
-  content: '';
-  position: absolute;
-  display: flex;
-  width: 10px;
-  min-height: 40px;
-  top: 0;
-  left: -4px;
-  z-index: 10;
-  border: solid 4px white;
-  border-right: none;
-}
-#compassWrapperXXX::after {
-  content: '';
-  position: absolute;
-  display: flex;
-  width: 10px;
-  min-height: 40px;
-  top: 0;
-  right: -4px;
-  z-index: 10;
-  border: solid 4px white;
-  border-left: none;
-}
+
+
+

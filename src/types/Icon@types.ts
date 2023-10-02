@@ -23,6 +23,7 @@ interface IconTypes {
 		| "Day"
 		| "MdiSetSquare"
 		| "Menu"
+		| "ArrangeSendBackward"
 	className?: string
 	size?: number
 }
