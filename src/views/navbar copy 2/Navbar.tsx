@@ -112,7 +112,6 @@ const Navbar = () => {
       sectionPos.compass.mid +
       compass.current.scrollLeft;
 
-      console.log(sectionPos, compass.current.scrollLeft)
     compass.current.scrollLeft =
       itemMidScrollPos +
       ((scrollPos - sectionPos[selectedItem].per) /
@@ -187,20 +186,10 @@ const Navbar = () => {
       <div className="grid grid-cols-[15%_70%_15%] h-16 items-center max-w-7xl mx-auto">
         <div className="flex justify-start items-center h-full">
 
-        <Title text="Toto je tooltip pro element" >
-          <div className="relative bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-2">
+        <Title text="Nanite Systems" titleOffset={80} direction={["down", "right"]} >
+          <div className="relative bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-4">
           </div>
         </Title>
-          
-
-          <div className="relative">
-            <Title text="Toto je tooltip pro element" >
-              <button>Icon</button>
-            </Title>
-          </div>
-
-
-
 
         </div>
         <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkXXX">
@@ -261,19 +250,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex justify-end items-center">
-          <LanguageSwitcher type="icon" />
-          <button
-            id="toggle"
-            className="p-2"
-            onClick={() => toggleTheme()}
-          >
-            <Icon
-              type={theme === "dark" ? "Night" : "Day"}
-              size={26}
-              className="text-white transition-all transform duration-100 ease-in hover:scale-125"
-            />
-          </button>
-          <Menu />
+          <Title text="Language switch" titleOffset={80} direction={["down", "left"]} >
+            <LanguageSwitcher type="icon" />
+          </Title>
+          <Title text="Dark theme" titleOffset={80} direction={["down", "left"]} >
+            <button
+              id="toggle"
+              className="p-2"
+              onClick={() => toggleTheme()}
+            >
+              <Icon
+                type={theme === "dark" ? "Night" : "Day"}
+                size={26}
+                className="text-white transition-all transform duration-100 ease-in hover:scale-125"
+              />
+            </button>
+          </Title>
+          <Title text="Menu" titleOffset={80} direction={["down", "left"]} >
+            <Menu />
+          </Title>
         </div>
       </div>
     </nav>

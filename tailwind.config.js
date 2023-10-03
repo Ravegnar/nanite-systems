@@ -37,6 +37,14 @@ module.exports = {
 					'100%': { 'opacity': '1' },
 					'100%': { 'width': '100%' },
 				},
+				blinkX3: {
+					'0%': { 'opacity': '0.3' },
+					'20%': { 'opacity': '1' },
+					'40%': { 'opacity': '0.3' },
+					'60%': { 'opacity': '1' },
+					'80%': { 'opacity': '0.3' },
+					'100%': { 'opacity': '1' },
+				},
 				fadeOut: {
 					'0%': { opacity: '0.75' },
 					'100%': { opacity: '0' },
