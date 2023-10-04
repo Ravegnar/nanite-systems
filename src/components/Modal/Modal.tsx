@@ -2,6 +2,7 @@ import Typography from '@/components/Typography/Typography'
 import Icon from '@/components/Icons/Icon'
 import { useTranslation } from 'react-i18next'
 import { useState, useRef, useEffect } from 'react';
+import {setElement} from '@/utils/setElement'
 
 interface props {
   onClose: any
@@ -25,23 +26,6 @@ export const Modal = (props: props) => {
   let transitionClasses = "transition-all duration-75 ease-in-out"
   let arrayedTransitionClasses = transitionClasses.split(" ")
   let isClosing: boolean = false
-
-
-  const setElement = (element: any, types: string, values: string, timeout: number = 0) => {
-    let typesData: string[] = types.split(",")
-    let valuesData: string[] = values.split(",")
-
-    if (element.current) {
-      element = element.current
-    }
-
-    setTimeout(() => {
-      typesData.map((type: string, index) => {
-        element.style[type] = valuesData[index]
-      })
-    }, timeout);
-  }
-
 
 
   useEffect(() => {

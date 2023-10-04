@@ -6,6 +6,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
 import Icon from "@/components/Icons/Icon";
 import Menu from "@/components/Menu/Menu";
 import Title from "@/components/Title/Title";
+import {setElement} from '@/utils/setElement'
 
 const intermediate = ["dot", "dot", "line", "dot", "dot"];
 const endCompassPoint = "nav-line-44";
@@ -61,7 +62,7 @@ const getItemsPos = (compass: any, compassBody: any) => {
   let compassMid = compassSizes.width / 2 + compassSizes.x;
 
   sectionPos.compass = {
-    widt: Math.ceil(compassBodySizes.width),
+    width: Math.ceil(compassBodySizes.width),
     x: Math.ceil(compassBodySizes.x),
     mid: compassMid,
   };
@@ -186,13 +187,13 @@ const Navbar = () => {
       <div className="grid grid-cols-[15%_70%_15%] h-16 items-center max-w-7xl mx-auto">
         <div className="flex justify-start items-center h-full">
 
-        <Title text="Nanite Systems" titleOffset={80} direction={["down", "right"]} >
+        <Title text="Nanite Systems" titleOffset={60} direction={["down", "right"]} >
           <div className="relative bg-logo w-12 h-12 mt-1 bg-contain bg-no-repeat -skew-x-[25deg] brightness-0 invert ml-4">
           </div>
         </Title>
 
         </div>
-        <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkXXX">
+        <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkX2X">
           <div
             id="compass"
             className="fixedX flex justify-around bg-black/30 w-full min-h-[40px] border-transparent
@@ -250,10 +251,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex justify-end items-center">
-          <Title text="Language switch" titleOffset={80} direction={["down", "left"]} >
+          <Title text="Language switch" titleOffset={60} direction={["down", "left"]} >
             <LanguageSwitcher type="icon" />
           </Title>
-          <Title text="Dark theme" titleOffset={80} direction={["down", "left"]} >
+          <Title text="Dark theme" titleOffset={60} direction={["down", "left"]} >
             <button
               id="toggle"
               className="p-2"
@@ -266,7 +267,7 @@ const Navbar = () => {
               />
             </button>
           </Title>
-          <Title text="Menu" titleOffset={80} direction={["down", "left"]} >
+          <Title text="Menu" titleOffset={60} direction={["down", "left"]} >
             <Menu />
           </Title>
         </div>

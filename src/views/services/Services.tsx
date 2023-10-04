@@ -50,7 +50,7 @@ const Services = () => {
 
 
   return (
-    <div className="w-full text-center mx-auto pt-20 relative XXX-mt-96">
+    <div className="w-full text-center mx-auto pt-20XXX relative XXX-mt-96">
       <Loader/>
 
       <button type="button" className="bg-black -mt-96 p-4" onClick={openModal}>
@@ -65,11 +65,11 @@ const Services = () => {
       }
 
 
-      <Typography text={t('services.label')} className="" variant='h3' />
+      <Typography text={t('services.label')} className="mt-10" variant='h3' />
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
-      <div className="max-w-7xl mx-auto mt-10">
+      <div className="max-w-7xl mx-auto mt-10 px-4 bg-cyan-700 dark:bg-black border-orange-700 pb-48">
       <Typography text={t('services.text')} className="" variant='subtitle1' />
-        <div className="grid grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-3 gap-8 mt-10 pt-48">
           {servicesCards.map(card => (
             <Card
               key={card.id}
