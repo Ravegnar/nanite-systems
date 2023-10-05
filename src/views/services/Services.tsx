@@ -67,7 +67,7 @@ const Services = () => {
 
       <Typography text={t('services.label')} className="mt-10" variant='h3' />
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
-      <div className="max-w-7xl mx-auto mt-10 px-4 bg-cyan-700 dark:bg-black border-orange-700 pb-48">
+      <div className="max-w-7xl mx-auto mt-10 px-16 bg-cyan-700 dark:bg-black border-orange-700 pb-48">
       <Typography text={t('services.text')} className="" variant='subtitle1' />
         <div className="grid grid-cols-3 gap-8 mt-10 pt-48">
           {servicesCards.map(card => (

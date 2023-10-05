@@ -196,9 +196,9 @@ const Navbar = () => {
         <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkX2X">
           <div
             id="compass"
-            className="fixedX flex justify-around bg-black/30 w-full min-h-[40px] border-transparent
-              before:absolute before:top-0 before:left-0 before:w-[10px] before:h-full before:border-4 before:border-r-0
-              after:absolute after:top-0 after:right-0 after:w-[10px] after:h-full after:border-4 after:border-l-0"
+            className="fixedX flex justify-around bg-cyan-900/40 dark:bg-orange-900/40 m-0 w-full min-h-[40px] border-transparent
+              before:absolute before:top-0 before:-left-0 before:w-[12px] before:h-full before:border-4 before:border-r-0
+              after:absolute after:top-0 after:right-0 after:w-[12px] after:h-full after:border-4 after:border-l-0"
           >
             <Icon
               type="MdiSetSquare"
@@ -267,9 +267,7 @@ const Navbar = () => {
               />
             </button>
           </Title>
-          <Title text="Menu" titleOffset={60} direction={["down", "left"]} >
-            <Menu />
-          </Title>
+          <Menu />
         </div>
       </div>
     </nav>

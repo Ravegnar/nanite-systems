@@ -47,8 +47,11 @@ const Title = ({
     ctx.stroke();
 
     const titleWidth = titleText.current.getBoundingClientRect().width;
+    
     setElement(titleBody, "width", "0px");
-    setElement(titleBody, "width", titleWidth + "px", 150);
+    setElement(canvas, "opacity", "opacity-0,opacity-90")
+    setElement(titleBody, "opacity", "opacity-0,opacity-100", 150)
+    setElement(titleBody, "width", titleWidth + "px", 180);
   }, [showTooltip]);
 
   const handleMouseEnter = () => {
@@ -61,8 +64,9 @@ const Title = ({
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
+      onMouseOver={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onMouseOut={handleMouseLeave}
       className="relative inline-block"
     >
       {children}
@@ -73,17 +77,17 @@ const Title = ({
             size={16}
             className={`absolute top-full ${
               isRight ? "left-full" : "[transform:rotateY(0.5turn)] right-full"
-            } flex-nowrapXXX text-white `}
+            } flex-nowrapXXX text-white transition-all transform duration-300 ease-in`}
           />
           <canvas
             ref={canvas}
             width={titleOffset + "px"}
             height={titleOffset + "px"}
-            className={`absolute inline-block w-auto -bottom-[13px] ${
+            className={`absolute inline-block w-auto opacity-0 -bottom-[13px] ${
               isRight ? "-right-[13px]" : "-left-[13px]"
             } translate-y-full ${
               isRight ? "translate-x-full" : "-translate-x-full"
-            } flex-nowrapXXX text-white transition-all transform duration-300 ease-in `}
+            } flex-nowrapXXX text-white transition-all transform duration-75 ease-in `}
           ></canvas>
           <div
             ref={titleBody}
@@ -92,7 +96,7 @@ const Title = ({
               right: isRight ? -(titleOffset + 1) + "px" : "none",
               left: isRight ? "none" : -(titleOffset + 1) + "px",
             }}
-            className={`absolute w-0 flex h-6 whitespace-nowrap bg-cyan-600/50 text-black translate-y-full ${
+            className={`absolute w-0 flex h-6 whitespace-nowrap opacity-0 bg-cyan-600/50 dark:bg-orange-500/75 text-black translate-y-full ${
               isRight ? "translate-x-full" : "-translate-x-full"
             }
               ${isRight ? "skew-x-[45deg]" : "skew-x-[-45deg]"} ${

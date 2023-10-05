@@ -37,7 +37,7 @@ const Footer = () => {
 									</a>
 									<a
 										href={`tel:${(appConfig.phone).replaceAll(" ","")}`}
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
+										className="border-b-2 border-transparent group-hover:border-cyan-500 dark:group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.phone}
 									</a>
@@ -51,7 +51,7 @@ const Footer = () => {
 									</a>
 									<a
 										href={`mailto:${appConfig.email}`}
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
+										className="border-b-2 border-transparent group-hover:border-cyan-500 dark:group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.email}
 									</a>
@@ -71,7 +71,7 @@ const Footer = () => {
 										href={"https://www." + appConfig.web}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="border-b-2 border-transparent group-hover:border-orange-600 group-hover:border-b-2 px-1"
+										className="border-b-2 border-transparent group-hover:border-cyan-500 dark:group-hover:border-orange-600 group-hover:border-b-2 px-1"
 									>
 										{appConfig.web}
 									</a>
