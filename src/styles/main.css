@@ -170,7 +170,7 @@ input:-webkit-autofill:focus {
   }
 }
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
   border: solid 4px transparent;
   background: #2c2c2c;
 }

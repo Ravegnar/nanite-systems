@@ -24,6 +24,7 @@ interface IconTypes {
 		| "MdiSetSquare"
 		| "Menu"
 		| "ArrangeSendBackward"
+		| "Backward"
 	className?: string
 	size?: number
 }

@@ -26,7 +26,7 @@ const Count = (props: ICountProps) => {
   return (<>
     <div className={`${className} col-span-2 flex flex-col text-center text-3xl laptop:text-4xl desktop:text-5xl text-white font-bold`}>
       {isVisiable && (
-        <div className="flex justify-center font-orbitron">
+        <div className="flex justify-center my-8 font-orbitron">
           <CountUp
             start={start}
             end={end}

@@ -96,7 +96,7 @@ const Title = ({
               right: isRight ? -(titleOffset + 1) + "px" : "none",
               left: isRight ? "none" : -(titleOffset + 1) + "px",
             }}
-            className={`absolute w-0 flex h-6 whitespace-nowrap opacity-0 bg-cyan-600/50 dark:bg-orange-500/75 text-black translate-y-full ${
+            className={`absolute w-0 flex h-6 whitespace-nowrap opacity-0 bg-cyan-600/50 dark:bg-orange-900/50 text-black translate-y-full ${
               isRight ? "translate-x-full" : "-translate-x-full"
             }
               ${isRight ? "skew-x-[45deg]" : "skew-x-[-45deg]"} ${

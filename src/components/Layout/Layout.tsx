@@ -8,6 +8,7 @@ import References from '@/views/references/References';
 import Clients from '@/views/clients/Clients';
 import Contacts from '@/views/contacts/Contacts';
 import Footer from '@/views/footer/Footer';
+import Scroller from '@/components/scroller/Scroller';
 
 export const Layout = () => {
   return (
@@ -18,6 +19,7 @@ export const Layout = () => {
       <Navbar></Navbar>
       max-w-7xl mx-auto
     */}
+      <Scroller />
       <div id='header'>
         <NavbarB />
         <Header />

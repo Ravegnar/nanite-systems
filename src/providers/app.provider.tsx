@@ -12,6 +12,8 @@ type Context = {
     getLanguage: string | null
     setSelectTab: (tabId: string | null) => void
     getSelectTab: string
+    setTheme: (theme: string) => void
+    getTheme: string
   }
 
 const AppProvider = (props: any) => {
@@ -20,6 +22,9 @@ const AppProvider = (props: any) => {
 
   // States
   const [selectedTab, setSelectedTab] = useState<string>(callUsTabs[0].id)
+  const [theme, setTheme] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark"
+  );
 
   // Hooks
   const { i18n } = useTranslation()
@@ -39,6 +44,8 @@ const AppProvider = (props: any) => {
     setSelectedTab(tabId)
   }
 
+  const getTheme = theme
+
   return (
     <AppContext.Provider
       value={{
@@ -46,6 +53,8 @@ const AppProvider = (props: any) => {
         setLanguage,
         getSelectTab,
         setSelectTab,
+        getTheme,
+        setTheme,
       }}
     >
       {children}

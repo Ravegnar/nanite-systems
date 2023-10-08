@@ -91,6 +91,9 @@ const Icon = (props: IconTypes) => {
 		case "ArrangeSendBackward":
 			path = <path d="M2,2H16V16H2V2M22,8V22H8V18H18V8H22M4,4V14H14V4H4Z" />
 			break
+		case "Backward":
+			path = <path d="M19,5V19H16V5M14,5V19L3,12" />
+			break
 	}
 
 	return (

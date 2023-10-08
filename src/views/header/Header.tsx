@@ -73,7 +73,7 @@ const Header = () => {
         ref={canvas}
         width="1px"
         height="1px"
-        className="absolute top-0"
+        className="absolute top-0 contents"
       ></canvas>
     </header>
   );

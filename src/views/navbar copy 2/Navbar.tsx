@@ -99,9 +99,7 @@ const getItemsPos = (compass: any, compassBody: any) => {
 const Navbar = () => {
   const [showContent, setShowContent] = useState(false);
   const { getLanguage, setLanguage } = useContext(AppContext);
-  const [theme, setTheme] = useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  );
+  const { getTheme, setTheme } = useContext(AppContext);
   const compass: any = useRef(null);
   const compassBody: any = useRef(null);
   const compassWrapper: any = useRef(null);
@@ -178,7 +176,7 @@ const Navbar = () => {
 
   const toggleTheme = () => {
     document.documentElement.classList.toggle("dark");
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(getTheme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -193,12 +191,12 @@ const Navbar = () => {
         </Title>
 
         </div>
-        <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[40px] animate-blinkX2X">
+        <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[32px] animate-blinkX2X">
           <div
             id="compass"
-            className="fixedX flex justify-around bg-cyan-900/40 dark:bg-orange-900/40 m-0 w-full min-h-[40px] border-transparent
-              before:absolute before:top-0 before:-left-0 before:w-[12px] before:h-full before:border-4 before:border-r-0
-              after:absolute after:top-0 after:right-0 after:w-[12px] after:h-full after:border-4 after:border-l-0"
+            className="fixedX flex justify-around items-center bg-cyan-900/40 dark:bg-orange-900/40 my-1 w-full min-h-[36px] border-transparent
+              before:absolute before:-top-1 before:-left-2 before:w-5 before:h-12 before:border-4 before:border-r-0
+              after:absolute after:-top-1 after:-right-2 after:w-5 after:h-12 after:border-4 after:border-l-0"
           >
             <Icon
               type="MdiSetSquare"
@@ -208,7 +206,7 @@ const Navbar = () => {
             <div
               id="compassBody"
               ref={compass}
-              className="fixed flex overflow-hidden lg:max-w-[69%] truncate py-1"
+              className="fixed flex overflow-hidden lg:max-w-[69%] truncate py-1XXX"
             >
               <div ref={compassBody} className="flex">
                 {compassItems.map((item, index) => {
@@ -261,7 +259,7 @@ const Navbar = () => {
               onClick={() => toggleTheme()}
             >
               <Icon
-                type={theme === "dark" ? "Night" : "Day"}
+                type={getTheme === "dark" ? "Night" : "Day"}
                 size={26}
                 className="text-white transition-all transform duration-100 ease-in hover:scale-125"
               />

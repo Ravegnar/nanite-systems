@@ -50,7 +50,9 @@ export const Modal = (props: props) => {
       })
 
       headerRef.current.classList.replace("bg-white", "bg-cyan-900")
+      headerRef.current.classList.add("dark:bg-orange-900/60")
       bodyRef.current.classList.replace("bg-white", "bg-cyan-700")
+      bodyRef.current.classList.add("dark:bg-orange-700/60")
 
       setElement(headerRef, "width,height", "100%,100%")
       setElement(bodyRef, "width,height", "100%,100%")
@@ -90,7 +92,9 @@ export const Modal = (props: props) => {
       ref.current.classList.replace("duration-75", "duration-300")
       ref.current.classList.replace("bg-opacity-75", "bg-opacity-0")
     })
-
+    
+    headerRef.current.classList.replace("dark:bg-orange-900/60", "dark:bg-orange-900/0")
+    bodyRef.current.classList.replace("dark:bg-orange-700/60", "dark:bg-orange-700/0")
 
     let closeGroup = [...texters, closeButton]
 
