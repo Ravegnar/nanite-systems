@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
   border: solid 4px transparent;
   background: #2c2c2c;
 }
-
+/*
 body::-webkit-scrollbar-button:start:decrement,
 body::-webkit-scrollbar-button:end:increment {
   display: block;
@@ -189,7 +189,6 @@ body::-webkit-scrollbar-track-piece {
   background: #bd1c1c;
   opacity: 0.2;
 
-  /* Here */
   display: none;
 
   -webkit-border-radius: 0;
@@ -201,7 +200,7 @@ body::-webkit-scrollbar-thumb:vertical {
   height: 50px;
   background-color: #ffffff;
 }
-
+*/
 
 @keyframes blinkV2 {
   0%, 40% {

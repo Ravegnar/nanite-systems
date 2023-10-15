@@ -80,6 +80,7 @@ export const Modal = (props: props) => {
     let spaners: any = modalRef.current.querySelectorAll(".modalSpanner")
     let closeIcon: any = modalRef.current.querySelector("#closeIcon")
     let closeButton: any = modalRef.current.querySelector("#closeButton")
+    let closeGroup = [...texters, closeButton]
 
     if (e && e.target.id !== "modalOverlay" || !isReady || isClosing) {
       return
@@ -96,7 +97,6 @@ export const Modal = (props: props) => {
     headerRef.current.classList.replace("dark:bg-orange-900/60", "dark:bg-orange-900/0")
     bodyRef.current.classList.replace("dark:bg-orange-700/60", "dark:bg-orange-700/0")
 
-    let closeGroup = [...texters, closeButton]
 
     closeGroup.forEach((e: any) => {
       e.classList.add(...arrayedTransitionClasses, "animate-blink")

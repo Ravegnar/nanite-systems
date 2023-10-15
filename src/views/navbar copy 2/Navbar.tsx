@@ -118,12 +118,14 @@ const Navbar = () => {
         sectionPos[selectedItem].difference;
   };
 
-  const onItemClick = (item: string) => {
+  const onItemClick = (e: any, item: string) => {
     const element = document.documentElement || document.body;
     const scrollTo = (sectionPos[item].per / 100) * scrollMaxHeight;
 
     selectedItem = item;
     element.scrollTop = scrollTo;
+
+    return e.target.classList.add("animate-blinkV2")
   };
 
   useEffect(() => {
@@ -194,7 +196,7 @@ const Navbar = () => {
         <div id="compassWrapper" ref={compassWrapper} className="relative w-full min-h-[32px] animate-blinkX2X">
           <div
             id="compass"
-            className="fixedX flex justify-around items-center bg-cyan-900/40 dark:bg-orange-900/40 my-1 w-full min-h-[36px] border-transparent
+            className="fixedX flex justify-around items-center bg-cyan-900/40 dark:bg-orange-700/30 my-1 w-full min-h-[36px] border-transparent
               before:absolute before:-top-1 before:-left-2 before:w-5 before:h-12 before:border-4 before:border-r-0
               after:absolute after:-top-1 after:-right-2 after:w-5 after:h-12 after:border-4 after:border-l-0"
           >
@@ -224,9 +226,9 @@ const Navbar = () => {
                             ? "hover:scale-110 cursor-pointer"
                             : ""
                         }`}
-                      onClick={() =>
+                      onClick={(e) =>
                         navItems.includes(item.replace("-F", ""))
-                          ? onItemClick(item.replace("-F", ""))
+                          ? onItemClick(e, item.replace("-F", ""))
                           : null
                       }
                     >
