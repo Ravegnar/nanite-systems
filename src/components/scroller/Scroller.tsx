@@ -226,7 +226,7 @@ export const Scroller = () => {
           : mousePos;
 
       spot.current.style.top = mousePos + "px";
-      window.scrollTo({ top: scrollTo, left: 0, behavior: "instant" });
+      window.scrollTo({ top: scrollTo, left: 0, behavior: "auto" });
       isScrolling = true;
     }
   };
