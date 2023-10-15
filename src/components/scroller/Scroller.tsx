@@ -106,8 +106,7 @@ export const Scroller = () => {
 
     // Start a new Path
     ctx.beginPath();
-    ctx.moveTo(scrollerRight + 12, scrollerOffsetY + scrollerWidth * 2);
-    ctx.lineTo(scrollerRight + 12, scrollerOffsetY + scrollerWidth * 2 - 4);
+    ctx.moveTo(scrollerRight + 12, scrollerOffsetY + scrollerWidth * 2 - 2.5);
     ctx.lineTo(
       scrollerLeft + 8,
       scrollerOffsetY + scrollerWidth * 2 + scrollerWidth + 2
@@ -121,7 +120,7 @@ export const Scroller = () => {
     );
     ctx.lineTo(
       scrollerRight + 12,
-      scrollerHeight - scrollerOffsetY - scrollerWidth * 2 + 4
+      scrollerHeight - scrollerOffsetY - scrollerWidth * 2 + 2.5
     );
 
     // Draw the Path
