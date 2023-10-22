@@ -182,7 +182,7 @@ const StyledButton = ({
         ) : null}
         {icon || index ? (
             <span
-              className={`${separatorWidth} ${separatorHeight} h-full bg-white dark:bg-black  ${
+              className={`${separatorWidth} ${separatorHeight} bg-white dark:bg-black  ${
                 revert ? "mr-auto ml-[12px]" : "ml-auto mr-[12px]"
               } `}
             />

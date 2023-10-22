@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import Icon from "@/components/Icons/Icon";
 import {setElement} from '@/utils/setElement'
+import { AppContext } from "@/providers/app.provider";
 
 const Title = ({
   text,
@@ -9,11 +10,13 @@ const Title = ({
   titleOffset = 40,
   children,
 }: any) => {
+  const { getTheme, setTheme } = useContext(AppContext);
   const [showTooltip, setShowTooltip] = useState(false);
   const canvas: any = useRef(null);
   const titleBody: any = useRef(null);
   const titleText: any = useRef(null);
 
+  const color = getTheme === "dark" ? "249 115 22" : "255 255 255";
   const yDirection = direction[0];
   const xDirection = direction[1];
   const isRight = xDirection === "right";
@@ -43,8 +46,14 @@ const Title = ({
     ctx.lineTo(isRight ? titleOffset : 0, titleOffset);
 
     // Draw the Path
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = `rgb(${color})`;
     ctx.stroke();
+  }, [showTooltip, getTheme]);
+
+  useEffect(() => {
+    if (!canvas.current) {
+      return;
+    }
 
     const titleWidth = titleText.current.getBoundingClientRect().width;
     
@@ -101,7 +110,7 @@ const Title = ({
             }
               ${isRight ? "skew-x-[45deg]" : "skew-x-[-45deg]"} ${
               isRight ? "border-l-[10px]" : "border-r-[10px]"
-            } border-b-[2px] border-white animate-blinkX2X transition-all transform duration-75 ease-in 
+            } border-b-[2px] border-white dark:border-orange-500 animate-blinkX2X transition-all transform duration-75 ease-in 
             `}
           >
             <div

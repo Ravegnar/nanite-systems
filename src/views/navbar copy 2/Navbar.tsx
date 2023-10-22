@@ -197,13 +197,13 @@ const Navbar = () => {
           <div
             id="compass"
             className="fixedX flex justify-around items-center bg-cyan-900/40 dark:bg-orange-700/30 my-1 w-full min-h-[36px] border-transparent
-              before:absolute before:-top-1 before:-left-2 before:w-5 before:h-12 before:border-4 before:border-r-0
-              after:absolute after:-top-1 after:-right-2 after:w-5 after:h-12 after:border-4 after:border-l-0"
+              before:absolute before:-top-1 before:-left-2 before:w-5 before:h-12 before:border-4 before:border-r-0 dark:before:border-orange-500
+              after:absolute after:-top-1 after:-right-2 after:w-5 after:h-12 after:border-4 after:border-l-0 dark:after:border-orange-500"
           >
             <Icon
               type="MdiSetSquare"
               size={20}
-              className="absolute -top-4 -rotate-45 scale-150 text-white z-0 hover:scale-125 "
+              className="absolute -top-4 -rotate-45 scale-150 text-white dark:text-orange-500 z-0 hover:scale-125 "
             />
             <div
               id="compassBody"

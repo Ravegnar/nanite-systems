@@ -34,6 +34,7 @@ export const Scroller = () => {
   let scrollMaxHeight: number = document.body.scrollHeight - window.innerHeight;
   const color = getTheme === "dark" ? "249 115 22" : "8 145 178";
   const colorBG = getTheme === "dark" ? "194 65 12" : "22 78 99";
+  const colorBorder = getTheme === "dark" ? "249 115 22" : "255 255 255";
 
   const handleMouseMove = (e: any) => {
     e.preventDefault();
@@ -88,7 +89,7 @@ export const Scroller = () => {
     ctx.lineTo(scrollerRight - 1.25, scrollerOffsetY + 8);
     ctx.lineTo(scrollerRight + 12, scrollerOffsetY - 14 + 8);
     // Draw the Path
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = `rgb(${colorBorder})`;
     ctx.fill();
     ctx.closePath();
 
@@ -115,7 +116,7 @@ export const Scroller = () => {
     ctx.lineTo(scrollerRight + 12, scrollerHeight - scrollerOffsetY + 14);
 
     // Draw the Path
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = `rgb(${colorBorder})`;
     ctx.stroke();
     ctx.closePath();
 
@@ -126,7 +127,7 @@ export const Scroller = () => {
     ctx.lineTo(scrollerRight - 1.25, scrollerHeight - scrollerOffsetY - 8);
     ctx.lineTo(scrollerRight + 12, scrollerHeight - scrollerOffsetY + 14 - 6);
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = `rgb(${colorBorder})`;
     ctx.fill();
     ctx.closePath();
 
@@ -265,7 +266,7 @@ export const Scroller = () => {
         <Icon
           type="MdiSetSquare"
           size={spotSize}
-          className="text-white cursor-pointer hover:scale-110"
+          className="text-white dark:text-orange-500 cursor-pointer hover:scale-110"
         />
       </span>
     </>

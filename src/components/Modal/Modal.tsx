@@ -148,8 +148,8 @@ export const Modal = (props: props) => {
       <div ref={modalRef} className="relative w-full max-w-4xl flex flex-col items-center m-auto">
         {isReady &&
           <>
-            <span className="modalSpanner absolute h-full w-[25%] top-0 left-0 border-y-4 border-l-4"/>
-            <span className="modalSpanner absolute h-full w-[25%] top-0 right-0 border-y-4 border-r-4"/>
+            <span className="modalSpanner absolute h-full w-[25%] top-0 left-0 border-y-4 border-l-4 dark:border-orange-500"/>
+            <span className="modalSpanner absolute h-full w-[25%] top-0 right-0 border-y-4 border-r-4 dark:border-orange-500"/>
           </>
         }
         <div className="relative w-full h-48 flex p-4 pb-0 animate-blink">
