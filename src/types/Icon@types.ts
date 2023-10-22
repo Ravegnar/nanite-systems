@@ -25,6 +25,7 @@ interface IconTypes {
 		| "Menu"
 		| "ArrangeSendBackward"
 		| "Backward"
+		| "Chevron"
 	className?: string
 	size?: number
 }

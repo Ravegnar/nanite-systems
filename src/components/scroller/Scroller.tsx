@@ -32,8 +32,35 @@ export const Scroller = () => {
   const spotP = (spotBottom - spotTop) / 100;
 
   let scrollMaxHeight: number = document.body.scrollHeight - window.innerHeight;
-  let color = getTheme === "dark" ? "249 115 22" : "8 145 178";
-  let colorBG = getTheme === "dark" ? "194 65 12" : "22 78 99";
+  const color = getTheme === "dark" ? "249 115 22" : "8 145 178";
+  const colorBG = getTheme === "dark" ? "194 65 12" : "22 78 99";
+
+  const handleMouseMove = (e: any) => {
+    e.preventDefault();
+
+    if (isDragging) {
+      let spotPos =
+        (spot.current.getBoundingClientRect().y - spotTop + 5.79) / spotP;
+      let scrollTo = (scrollMaxHeight / 100) * spotPos;
+      let mousePos = e.clientY - spotSize / 2;
+
+      mousePos =
+        mousePos <= spotTop
+          ? spotTop
+          : mousePos >= spotBottom
+          ? spotBottom
+          : mousePos;
+
+      spot.current.style.top = mousePos + "px";
+      window.scrollTo({ top: scrollTo, left: 0, behavior: "auto" });
+      isScrolling = true;
+    }
+  };
+
+  const handleMouseUp = (e: any) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
 
   useEffect(() => {
     if (!canvas.current) {
@@ -208,33 +235,6 @@ export const Scroller = () => {
       }
     });
   }, [scrollPos]);
-
-  const handleMouseMove = (e: any) => {
-    e.preventDefault();
-
-    if (isDragging) {
-      let spotPos =
-        (spot.current.getBoundingClientRect().y - spotTop + 5.79) / spotP;
-      let scrollTo = (scrollMaxHeight / 100) * spotPos;
-      let mousePos = e.clientY - spotSize / 2;
-
-      mousePos =
-        mousePos <= spotTop
-          ? spotTop
-          : mousePos >= spotBottom
-          ? spotBottom
-          : mousePos;
-
-      spot.current.style.top = mousePos + "px";
-      window.scrollTo({ top: scrollTo, left: 0, behavior: "auto" });
-      isScrolling = true;
-    }
-  };
-
-  const handleMouseUp = (e: any) => {
-    e.preventDefault();
-    setIsDragging(false);
-  };
 
   useEffect(() => {
     if (isDragging) {

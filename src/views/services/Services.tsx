@@ -7,6 +7,7 @@ import Count from '@/components/Count/Count'
 import Chart from '@/components/Chart/Chart'
 import Modal from '@/components/Modal/Modal'
 import Loader from '@/components/Loader/Loader'
+import StyledButton from '@/components/StyledButton/StyledButton'
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -53,8 +54,8 @@ const Services = () => {
     <div className="w-full text-center mx-auto pt-20XXX relative XXX-mt-96">
       <Loader/>
 
-      <button type="button" className="bg-black -mt-96 p-4" onClick={openModal}>
-        Show modal
+      <button type="button" className="-mt-96 p-4">
+        <StyledButton name='Show modal' onClick={openModal} />
       </button>
       {showModal &&
         <Modal
@@ -63,6 +64,15 @@ const Services = () => {
           textBody = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio earum, officiis beatae nostrum magni soluta culpa similique, labore quis quisquam repudiandae dolor officia ratione magnam. Ratione deserunt vitae eius ipsam!"
         />
       }
+
+      <div className="w-[240px] flex flex-col justify-center items-center mt-16 mx-auto">
+        <StyledButton name='Chevron Right' chevron={false} icon='DarkMode' />
+        <StyledButton name='Chevron--Right' chevron={false} icon='Github' />
+        <StyledButton name='Chevron Right' icon='Email' revert />
+        <StyledButton name='Chevron-Right' chevron={false} index={8} />
+        <StyledButton name='Chevron-Right' />
+        <StyledButton name='Chevron' chevron={false} center />
+      </div>
 
 
       <Typography text={t('services.label')} className="mt-10" variant='h3' />
