@@ -35,6 +35,7 @@ export const Scroller = () => {
   const color = getTheme === "dark" ? "249 115 22" : "8 145 178";
   const colorBG = getTheme === "dark" ? "194 65 12" : "22 78 99";
   const colorBorder = getTheme === "dark" ? "249 115 22" : "255 255 255";
+  const colorSpot = getTheme === "dark" ? "255 255 255" : "8 145 178";
 
   const handleMouseMove = (e: any) => {
     e.preventDefault();
@@ -161,7 +162,7 @@ export const Scroller = () => {
     ctx.lineTo(scrollerRight - 12, scrollerMid);
     ctx.lineTo(scrollerLeft, scrollerMid + scrollerWidth - 12);
 
-    ctx.fillStyle = `rgb(${color})`;
+    ctx.fillStyle = `rgb(${colorSpot})`;
     ctx.fill();
     ctx.closePath();
 

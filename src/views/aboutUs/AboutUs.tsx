@@ -6,7 +6,7 @@ const AboutUs = () => {
   const { t } = useTranslation()
 
   return (
-    <div id="aboutUs" className="w-full text-center mx-auto pt-20">
+    <div className="w-full max-w-7xl text-center mx-auto pt-20">
       <Typography text={t('aboutUs.label')} className="" variant='h3' />
       <div id='title-line' className="w-28 h-1 bg-white mx-auto" />
       <div className="w-full grid grid-cols-2 mx-auto mt-10">

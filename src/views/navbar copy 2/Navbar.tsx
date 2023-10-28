@@ -233,12 +233,12 @@ const Navbar = () => {
                       }
                     >
                       {item === "dot" ? (
-                        <Icon type="Dot" size={30} className="text-white" />
+                        <Icon type="Dot" size={30}/>
                       ) : item === "line" ? (
                         <Icon
                           type="Minus"
                           size={30}
-                          className="text-white rotate-90"
+                          className="rotate-90"
                         />
                       ) : (
                         t(`nav.${item.replace("-F", "")}`)

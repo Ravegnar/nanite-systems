@@ -65,7 +65,7 @@ const Services = () => {
         />
       }
 
-      <div className="w-[240px] flex flex-col justify-center items-center mt-16 mx-auto">
+      <div className="w-[296px] flex flex-col justify-center items-center mt-16 mx-auto p-6 border-4 dark:border-orange-600">
         <StyledButton name='Chevron Right' chevron={false} icon='DarkMode' />
         <StyledButton name='Chevron--Right' chevron={false} icon='Github' />
         <StyledButton name='Chevron Right' icon='Email' revert />

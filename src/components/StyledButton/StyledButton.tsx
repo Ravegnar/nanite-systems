@@ -169,7 +169,7 @@ const StyledButton = ({
           <Icon
             type="Chevron"
             size={iconSize}
-            className="text-white dark:text-black hover:scale-110 ml-auto"
+            className="text-white dark:text-blackX hover:scale-110 ml-auto"
           />
         ) : null}
         {name}
@@ -177,7 +177,7 @@ const StyledButton = ({
           <Icon
             type="Chevron"
             size={iconSize}
-            className="text-white dark:text-black hover:scale-110 ml-auto"
+            className="text-white dark:text-blackX hover:scale-110 ml-auto"
           />
         ) : null}
         {icon || index ? (
@@ -191,11 +191,11 @@ const StyledButton = ({
             <Icon
               type={icon}
               size={iconSize}
-              className="text-white dark:text-black hover:scale-110"
+              className="text-white dark:text-orange-500X  hover:scale-110"
             />
         ) : null}
         {index ? (
-          <span className="font-orbitron text-white dark:text-black font-bold">
+          <span className="font-orbitron text-white dark:text-orange-500X font-bold">
             0{index}
           </span>
         ) : null}
