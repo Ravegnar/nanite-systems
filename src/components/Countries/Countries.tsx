@@ -1,38 +1,35 @@
 //'use client'
-import {addData, getData} from "@/services/firebase";
+import { addData, getData } from "@/services/firebase"
 
 const Countries = () => {
+	const handleForm = async () => {
+		const data = {
+			name: "John snow",
+			house: "Stark"
+		}
 
-  const handleForm = async () => {
-    const data = {
-      name: 'John snow',
-      house: 'Stark'
-    }
+		const { result, error } = await addData("Nanite Systems", data)
 
-    const { result, error } = await addData('Nanite Systems', data)
+		console.log(result)
+		if (error) {
+			return console.log(error)
+		}
+	}
 
-    console.log(result)
-    if (error) {
-      return console.log(error)
-    }
-  }
+	let frrr: any
 
-  let frrr: any
-
- // handleForm()
-/*
+	// handleForm()
+	/*
   (async () => {
     frrr = await getData('Nanite Systems', ["user-id"])
     console.log(frrr)
   })()
   */
-  
-  return (
-    <div></div>
-  )
-  };
-  
-export default Countries;
+
+	return <div></div>
+}
+
+export default Countries
 /*
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebaseConfig'; // Zde importujte konfiguraci z vašeho souboru
@@ -189,7 +186,6 @@ export default function Countries() {
   return <div>asd</div>;
 }
 */
-
 
 /*
 // Import the functions you need from the SDKs you need

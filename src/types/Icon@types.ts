@@ -1,6 +1,6 @@
 interface IconTypes {
-	type: 
-			"Book"
+	type:
+		| "Book"
 		| "Earth"
 		| "Facebook"
 		| "Twitter"

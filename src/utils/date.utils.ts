@@ -3,7 +3,7 @@
  * ---
  */
 export function getYear(): number {
-  const todayDate = new Date()
-  const year = todayDate.getFullYear()
-  return year
+	const todayDate = new Date()
+	const year = todayDate.getFullYear()
+	return year
 }

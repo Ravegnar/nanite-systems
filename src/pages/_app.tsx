@@ -1,26 +1,25 @@
-import "@/styles/main.css";
-import "swiper/css";
-import "mapbox-gl/dist/mapbox-gl.css";
-import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
+import "@/styles/main.css"
+import "swiper/css"
+import "mapbox-gl/dist/mapbox-gl.css"
+import type { AppProps } from "next/app"
+import { useEffect, useState } from "react"
 // Providers
-import MasterProvider from "@/providers/master.provider";
+import MasterProvider from "@/providers/master.provider"
 
 const NaniteSystemsApp = ({ Component, pageProps }: AppProps) => {
 	//at the first render initialRenderComplete is false
-	const [initialRenderComplete, setInitialRenderComplete] =
-		useState<boolean>(false);
+	const [initialRenderComplete, setInitialRenderComplete] = useState<boolean>(false)
 
 	useEffect(() => {
-		setInitialRenderComplete(true);
-	}, []);
+		setInitialRenderComplete(true)
+	}, [])
 
-	if (!initialRenderComplete) return <></>;
+	if (!initialRenderComplete) return <></>
 	return (
-			<MasterProvider>
-				<Component {...pageProps} />
-			</MasterProvider>
-	);
-};
+		<MasterProvider>
+			<Component {...pageProps} />
+		</MasterProvider>
+	)
+}
 
-export default NaniteSystemsApp;
+export default NaniteSystemsApp

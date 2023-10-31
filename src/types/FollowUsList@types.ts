@@ -1,7 +1,7 @@
-import IconTypes from '@/types/Icon@types'
+import IconTypes from "@/types/Icon@types"
 
 export interface IFollowUsList extends IconTypes {
-  href: string
+	href: string
 }
 
 export default IFollowUsList
