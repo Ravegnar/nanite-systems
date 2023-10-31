@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   env:{
-    REACT_APP_MAPBOX_TOKEN: process.env.REACT_APP_MAPBOX_TOKEN
+    FIREBASE_CONFIG: process.env.FIREBASE_CONFIG,
+    REACT_APP_MAPBOX_TOKEN: process.env.REACT_APP_MAPBOX_TOKEN,
   }
 }
 

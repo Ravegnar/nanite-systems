@@ -9,6 +9,8 @@ import Modal from '@/components/Modal/Modal'
 import Loader from '@/components/Loader/Loader'
 import StyledButton from '@/components/StyledButton/StyledButton'
 
+import Countries from '@/components/Countries/Countries'
+
 const Services = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const [showModal, setShowModal] = useState<boolean>(false)
@@ -54,9 +56,11 @@ const Services = () => {
     <div className="w-full text-center mx-auto pt-20XXX relative XXX-mt-96">
       <Loader/>
 
-      <button type="button" className="-mt-96 p-4">
+        <Countries />
+
+      <span className="-mt-24 w-[296px] flex mx-auto p-4">
         <StyledButton name='Show modal' onClick={openModal} />
-      </button>
+      </span>
       {showModal &&
         <Modal
           onClose={closeModal}
