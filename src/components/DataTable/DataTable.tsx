@@ -63,7 +63,7 @@ const DataTable = () => {
 				))}
 			</div>
 			<div>{loading ? "Loading" : data ? 
-      Object.entries(data).map(([key, val]) => {
+      Object.entries(data).map(([key, val]: any) => {
         return (
           <div key={key}>{val?.name ? val.name : key}</div>
         )
