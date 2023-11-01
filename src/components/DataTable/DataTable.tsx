@@ -1,35 +1,79 @@
 //'use client'
-import { addData, getData } from "@/services/firebase"
+import { getData } from "@/services/firebase"
+import { useState, useRef, useEffect } from "react"
+import StyledButton from "@/components/StyledButton/StyledButton"
 
-const Countries = () => {
-	const handleForm = async () => {
-		const data = {
-			name: "John snow",
-			house: "Stark"
-		}
-
-		const { result, error } = await addData("Nanite Systems", data)
-
-		console.log(result)
-		if (error) {
-			return console.log(error)
-		}
+const DataTable = () => {
+	const [activeProducts, setActiveProducts] = useState<any>(null)
+	const [data, setData] = useState<any>(null)
+	const [loading, setLoading] = useState(false)
+	const productList = {
+		Operatives: {},
+		Weapons: {},
+		Equipment: {}
 	}
 
-	let frrr: any
+	//let data: any
+	//let loading = false
+/*
+	useEffect(() => {
+		if (!activeProducts) {
+			return
+		}
+		loading = true
+		;(async () => {
+      const { result, error } = await getData(`NS-Products`, activeProducts)
+      if (result) {
+        loading = false
+        data = result
+        console.log(data, error)
+      }
+		})()
+	}, [activeProducts])
+  */
 
-	// handleForm()
 	/*
   (async () => {
     frrr = await getData('Nanite Systems', ["user-id"])
     console.log(frrr)
-  })()
+  })()   ${type}
   */
+	const getProducts = async (type: string) => {
+    //setActiveProducts(type)
+		setLoading(true)
+		const { result, error } = await getData(`NS-Products`, type)
 
-	return <div></div>
+		if (result) {
+      setLoading(false)
+			setData(result)
+      console.log(data, error)
+		}
+	}
+
+	return (
+		<>
+			<div className="flex justify-center">
+				{Object.keys(productList).map((type) => (
+					<StyledButton
+						key={type}
+						name={type}
+						classses="w-[164px] mx-2"
+						onClick={() => getProducts(type)}
+					/>
+				))}
+			</div>
+			<div>{loading ? "Loading" : data ? 
+      Object.entries(data).map(([key, val]) => {
+        return (
+          <div key={key}>{val?.name ? val.name : key}</div>
+        )
+      })
+      : "null"}</div>
+		</>
+	)
 }
 
-export default Countries
+export default DataTable
 /*
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebaseConfig'; // Zde importujte konfiguraci z vašeho souboru

@@ -1,0 +1,366 @@
+{
+    "NS-Products": {
+      "Operatives": {
+        "Engi": {
+          "gif": "./O/NSO/EN.gif",
+          "health": 500,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/1/18/Icon_Engineer.png",
+          "id": "Engi",
+          "image": "./O/NSO/Engin.jpg",
+          "info": "Engineers provide support on the battlefield by repairing mechanical objects, resupplying allies with ammunition, and deploying a variety of battlefield equipment. Their presence in a vehicle is always helpful as their extensive mechanical knowledge allows them to perform field repairs.",
+          "name": "Engineer",
+          "price": 50000,
+          "shield": 500,
+          "specialization": "Repairs, Ammo Resupply, Turrets",
+          "type": "Infantry"
+        },
+        "Heav": {
+          "gif": "./O/NSO/HE.gif",
+          "health": 500,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/f/ff/Icon_Heavy_Assault.png",
+          "id": "Heav",
+          "image": "./O/NSO/Heavy.jpg",
+          "info": "Identified by their bulkier armor, Heavy Assaults are the front-line brawler of your faction´s infantry. They possess an energy-fueled overshield for added survivability, come equipped with high-capacity light machineguns for large-scale infantry firefights, and carry a rocket launcher capable of inflicting heavy damage to vehicles.",
+          "name": "Heavy Assault",
+          "price": 50000,
+          "shield": 500,
+          "specialization": "Overshield, Anti-Vehicle, Anti-Aircraft",
+          "type": "Infantry"
+        },
+        "Infi": {
+          "gif": "./O/NSO/IN.gif",
+          "health": 500,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/3/3d/Icon_Infiltrator.png",
+          "id": "Infi",
+          "image": "./O/NSO/Infil.jpg",
+          "info": "The Infiltrator is a recon unit with a short duration cloaking ability, spotting tools and the ability to hack enemy terminals and devices converting them to your empire.",
+          "name": "Infiltrator",
+          "price": 50000,
+          "shield": 400,
+          "specialization": "Sniper, Stealth, Hacking",
+          "type": "Infantry"
+        },
+        "Ligh": {
+          "gif": "./O/NSO/LA.gif",
+          "health": 500,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/a/a0/Icon_Light_Assault.png",
+          "id": "Ligh",
+          "image": "./O/NSO/Light.jpg",
+          "info": "The Light Assault is a close-to-medium range skirmisher. It has a jetpack for enhanced mobility and can quickly move to flank enemy positions.",
+          "name": "Light Assault",
+          "price": 50000,
+          "shield": 500,
+          "specialization": "Jump Jets, High Mobility",
+          "type": "Infantry"
+        },
+        "MAX": {
+          "gif": "./O/NSO/Defec.jpg",
+          "health": 2000,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/0/05/Icon_MAX.png",
+          "id": "MAX",
+          "image": "./O/NSO/Defec.jpg",
+          "info": "Nanite Systems´ answer to the MAX units available to other empires: the Defector trades dual weapon systems for a mounted grenade printer that uses a heat mechanic instead of traditional ammunition.",
+          "name": "Defector",
+          "price": 100000,
+          "shield": 0,
+          "specialization": "Exo-Suit",
+          "type": "Infantry-Vehicle Hybrid"
+        },
+        "Medi": {
+          "gif": "./O/NSO/ME.gif",
+          "health": 500,
+          "icon": "https://static.wikia.nocookie.net/planetside2/images/c/ce/Icon_Combat_Medic.png",
+          "id": "Medi",
+          "image": "./O/NSO/Medic.jpg",
+          "info": "Combat Medics are a versatile class, as capable at eliminating threats with their Assault Rifle as they are healing and reviving allies with their Medical Applicator tool. Keeping a cool head and evaluating the threats to yourself and your teammates is key to success. Behind every great squad is a Combat Medic who knows that sometimes the best way to save your allies is to take down the enemy first.",
+          "name": "Combat Medic",
+          "price": 50000,
+          "shield": 500,
+          "specialization": "Heal, Revive, Cleanse effects",
+          "type": "Infantry"
+        }
+      },
+      "Equipment": {
+        "Equipment": {
+          "AUXILIARY_SHIELD": {
+            "id": "AUXILIARY_SHIELD",
+            "image": "./O/NSW/AUXILIARY_SHIELD.png",
+            "info": "Advanced calibration systems passively increase your maximum shield health by 50.",
+            "name": "Auxiliary Shield",
+            "price": 50,
+            "type": "Shield"
+          },
+          "C-4": {
+            "id": "C-4",
+            "image": "./O/NSW/C-4.png",
+            "info": "Plastic explosives capable of incredible damage to infantry, MAXes, and vehicles alike.",
+            "name": "C-4",
+            "price": 100,
+            "type": "Explosives"
+          },
+          "F_U_S_E": {
+            "id": "F_U_S_E",
+            "image": "./O/NSW/F.U.S.E..png",
+            "info": "A deceptive looking land mine that, upon detecting nearby enemy infantry, explodes into a cloud of anti-infantry shrapnel.",
+            "name": "F.U.S.E.",
+            "price": 80,
+            "type": "Mine"
+          },
+          "Havoc_Mine": {
+            "id": "Havoc_Mine",
+            "image": "./O/NSW/Havoc_Mine.png",
+            "info": "Detonates on enemy movement releasing a destabilizing field that affects mechanical targets and prevents them from being repaired for up to 6 seconds.",
+            "name": "Havoc Mine",
+            "price": 90,
+            "type": "Mine"
+          },
+          "INFRADINE": {
+            "id": "INFRADINE",
+            "image": "./O/NSW/MEDICAL_KIT.png",
+            "info": "This single-use Infradine injector will allow the soldier to view heat signatures as if they were using an infrared scope.",
+            "name": "Infradine",
+            "price": 55,
+            "type": "Injector"
+          },
+          "MEDICAL_KIT": {
+            "id": "MEDICAL_KIT",
+            "image": "./O/NSW/MEDICAL_KIT.png",
+            "info": "This single-use Medical Kit instantly restores 500 health via needle-free, subcutaneous delivery of adrenaline and nanite-based coagulants.",
+            "name": "Medical Kit",
+            "price": 50,
+            "type": "Injector "
+          },
+          "RESTORATION_KIT": {
+            "id": "RESTORATION_KIT",
+            "image": "./O/NSW/MEDICAL_KIT.png",
+            "info": "This single-use Restoration Kit regenerates 70 health per second for 12 seconds through needle-free, subcutaneous delivery of adrenaline and nanite-based coagulants.",
+            "name": "Restoration Kit",
+            "price": 40,
+            "type": "Injector "
+          },
+          "TANK_MINE": {
+            "id": "TANK_MINE",
+            "image": "./O/NSW/Tank_Mine.png",
+            "info": "User deployable anti-vehicular mine, activated by nearby enemy vehicles.",
+            "name": "Tank Mine",
+            "price": 130,
+            "type": "Mine"
+          }
+        },
+        "Tools": {
+          "LAV_AG": {
+            "id": "LAV_AG",
+            "image": "./O/NSW/LAVAG.png",
+            "info": "All heavy combat units are outfitted with a general purpose dumbfire rocket launcher to contest enemy vehicles as needed.",
+            "name": "LAV-AG",
+            "price": 1650,
+            "type": "Rocket Launcher"
+          },
+          "MEDICAL_APPLICATOR_1": {
+            "id": "MEDICAL_APPLICATOR_1",
+            "image": "./O/NSW/Medical_Applicator.png",
+            "info": "A Nanite based Medical Applicator tool that has been specialized to repair and revive infantry soldiers.",
+            "name": "Medical Applicator 1",
+            "price": 550,
+            "type": "Infantry Abilities"
+          },
+          "MOTION_SPOTTER_1": {
+            "id": "MOTION_SPOTTER_1",
+            "image": "./O/NSW/Motion_Spotter.png",
+            "info": "While deployed, shares the location of enemy infantry within 30 meters every 1.5 seconds; the Infiltrator also receives live movement updates of enemies within 20 meters. Lasts 120 seconds, 2 can be carried.",
+            "name": "Motion Spotter 1",
+            "price": 400,
+            "type": "Infantry Abilities"
+          },
+          "NANO-ARMOR_KIT_1": {
+            "id": "NANO-ARMOR_KIT_1",
+            "image": "./O/NSW/Nano-Armor_Kit.png",
+            "info": "The Nano-Armor Kit repairs friendly vehicles, MAXes, equipment and can deconstruct enemy tank mines.",
+            "name": "Nano-Armor Kit 1",
+            "price": 350,
+            "type": "Infantry Abilities"
+          },
+          "RECON_DETECTION_DEVICE_1": {
+            "id": "RECON_DETECTION_DEVICE_1",
+            "image": "./O/NSW/Recon_Detection_Device.png",
+            "info": "The Recon Detection Device's dart pulses every few seconds to momentarily detect the location of fast-moving enemies, including cloaked infiltrators, in a large radius.",
+            "name": "Recon Detection Device 1",
+            "price": 400,
+            "type": "Infantry Abilities"
+          },
+          "ROCKET_RIFLE": {
+            "id": "ROCKET_RIFLE",
+            "image": "./O/NSW/Rocklet_Rifle.png",
+            "info": "The Rocklet Rifle fires munitions that auto-det on aircraft or pierce enemy ground vehicle armor. Alternate rocklet types may be loaded into the weapon.",
+            "name": "ROCKET RIFLE",
+            "price": 850,
+            "type": "Aerial Combat Weapon"
+          }
+        }
+      },
+      "Weapons": {
+        "Primary": {
+          "ADVX_Mako": {
+            "id": "ADVX_Mako",
+            "image": "./O/NSW/ADVX_Mako.png",
+            "info": "The Advantix Mako Sniper Rifle embodies the long-distance stopping power of a traditional bolt-action while retaining versatility through a balanced reload speed and attachment variety.",
+            "name": "ADVX Mako",
+            "price": 3000,
+            "type": "Sniper Rifle"
+          },
+          "AR-100": {
+            "id": "AR-100",
+            "image": "./O/NSW/AR-100.png",
+            "info": "This standard issue rifle was the genesis for all future experimentation into weapon design for field operatives. It harbors moderate rate of fire, stability, and stopping power, resulting in a versatile combat platform.",
+            "name": "AR-100",
+            "price": 1500,
+            "type": "Assault Rifle"
+          },
+          "AR-101": {
+            "id": "AR-101",
+            "image": "./O/NSW/AR-101.png",
+            "info": "The AR-101 was quick to follow its predecessor's design, with modest modifications that include additional stopping power and controllability at cost to rate of fire.",
+            "name": "AR-101",
+            "price": 1700,
+            "type": "Assault Rifle"
+          },
+          "AR-N203": {
+            "id": "AR-N203",
+            "image": "./O/NSW/AR-N203.png",
+            "info": "The semi-auto N203 assault rifle retains accuracy through a controlled, three-round burst, while offering stopping power that rivals that of heavier weapons.",
+            "name": "AR-N203",
+            "price": 1900,
+            "type": "Assault Rifle"
+          },
+          "Automatic_Trigger": {
+            "id": "Automatic_Trigger",
+            "image": "./O/NSW/Automatic_Trigger.png",
+            "info": "The Hummingbird is a modified grenade printer that fires explosive smart-drones effective against enemy aircraft. The visor will lock onto enemy vehicles within range, and throwing a drone will place it on an interceptor course with the target. Drones may also be dumbfired without a lock-on.",
+            "name": "D7 Hummingbird",
+            "price": 3300,
+            "type": "MAX Heavy Weapon"
+          },
+          "CB-100": {
+            "id": "CB-100",
+            "image": "./O/NSW/CB-100.png",
+            "info": "The CB-100 was developed with versatility in mind, arming operatives with consistent damage and reliable recoil at close to mid range.",
+            "name": "CB-100",
+            "price": 1250,
+            "type": "Carbine"
+          },
+          "CB-200": {
+            "id": "CB-200",
+            "image": "./O/NSW/CB-200.png",
+            "info": "Big brother to the CB-100, the 200 model was designed to emphasize stopping power and accuracy at cost to its rate of fire.",
+            "name": "CB-200",
+            "price": 1400,
+            "type": "Carbine"
+          },
+          "CB-X75": {
+            "id": "CB-X75",
+            "image": "./O/NSW/CB-X75.png",
+            "info": "The CB-X75 is an aggressive carbine built for close quarters combat. The X75 retains better hipfire accuracy than most carbines, and the lightweight design allows for better mobility while aiming down sights.",
+            "name": "CB-X75",
+            "price": 1750,
+            "type": "Carbine"
+          },
+          "GRANADE_PRINTER": {
+            "id": "GRANADE_PRINTER",
+            "image": "./O/NSW/GRENADEPRINTER.png",
+            "info": "Wrist-mounted nano-printers replenish explosives periodically, and require cooldown when overheated.",
+            "name": "Granade Printer",
+            "price": 3200,
+            "type": "MAX Heavy Weapon"
+          },
+          "HSG-400": {
+            "id": "HSG-400",
+            "image": "./O/NSW/HSG-400.png",
+            "info": "Labeled a heavy shotgun, the slow-firing HSG-400 can down close-range infantry targets in a single shot. While magazine size is limited, the weapon still takes advantage of a standard mag-fed reload system.",
+            "name": "HSG-400",
+            "price": 1550,
+            "type": "Shotgun"
+          },
+          "Lightweight_Materials": {
+            "id": "Lightweight_Materials",
+            "image": "./O/NSW/Lightweight_Materials.png",
+            "info": "The Detonator manufactures a long-range artillery shell carrying an explosive anti-vehicle payload that increases in power the further it travels, dealing maximum damage beyond 100 meters. This weapon has an arming distance of 20 meters.",
+            "name": "D11 Detonator",
+            "price": 3550,
+            "type": "MAX Heavy Weapon"
+          },
+          "SG-100": {
+            "id": "SG-100",
+            "image": "./O/NSW/SG-100.png",
+            "info": "The standard-issue SG-100 has a large magazine size and excellent pellet coverage, making it a staple among operatives in CQB scenarios.",
+            "name": "SG-100",
+            "price": 1150,
+            "type": "Shotgun"
+          },
+          "SG-A25": {
+            "id": "SG-A25",
+            "image": "./O/NSW/SG-A25.png",
+            "info": "XXX",
+            "name": "SG-A25",
+            "price": 1300,
+            "type": "Shotgun"
+          },
+          "SR-100": {
+            "id": "SR-100",
+            "image": "./O/NSW/SR-100.png",
+            "info": "The semi-auto SR-100 is capable of eliminating targets with rapid follow-up shots at long range.",
+            "name": "SR-100",
+            "price": 1800,
+            "type": "Sniper Rifle"
+          },
+          "SR-150": {
+            "id": "SR-150",
+            "image": "./O/NSW/SR-150.png",
+            "info": "The heavy SR-150 outclasses weapons in its class for long-range assassination missions, thanks to additional stopping power and projectile velocity.",
+            "name": "SR-150",
+            "price": 2000,
+            "type": "Sniper Rifle"
+          },
+          "SR-L75": {
+            "id": "SR-L75",
+            "image": "./O/NSW/SR-L75.png",
+            "info": "A modified version of the SR-100, engineered with lighter materials for mobility when aiming down the scope. The L75 trades stopping power over distance for more versatility in evolving combat environments.",
+            "name": "SR-L75",
+            "price": 2250,
+            "type": "Sniper Rifle"
+          },
+          "XMG-100": {
+            "id": "XMG-100",
+            "image": "./O/NSW/XMG-100.png",
+            "info": "The XMG-100's large magazine and high rate of fire solidifies its use during close-to-medium range assault scenarios.",
+            "name": "XMG-100",
+            "price": 1750,
+            "type": "Light Machine Gun"
+          },
+          "XMG-155": {
+            "id": "XMG-155",
+            "image": "./O/NSW/XMG-155.png",
+            "info": "Feedback from field operatives resulted in the release of the XMG-155 that houses a larger magazine and slightly more stopping power than its predecessor could afford.",
+            "name": "XMG-155",
+            "price": 1900,
+            "type": "Light Machine Gun"
+          },
+          "XMG-200": {
+            "id": "XMG-200",
+            "image": "./O/NSW/XMG-200.png",
+            "info": "The XMG-200's design was centered around increased effectiveness during open-field combat with as little downtime as possible.",
+            "name": "XMG-200",
+            "price": 2100,
+            "type": "Light Machine Gun"
+          }
+        },
+        "Secondary": {
+          "U-100_Lastly": {
+            "image": "https://static.wikia.nocookie.net/planetside2/images/a/a7/U-100_Lastly.png/revision/latest?cb=20210630233831",
+            "info": "The standard issue U-100 Lastly is a reliable sidearm with moderate punch, stable recoil, and 12-round magazine.",
+            "name": "U-100 LASTLY",
+            "type": "Pistol"
+          }
+        }
+      }
+    }
+  }

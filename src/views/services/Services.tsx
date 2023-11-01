@@ -9,7 +9,7 @@ import Modal from "@/components/Modal/Modal"
 import Loader from "@/components/Loader/Loader"
 import StyledButton from "@/components/StyledButton/StyledButton"
 
-import Countries from "@/components/Countries/Countries"
+import DataTable from "@/components/DataTable/DataTable"
 
 const Services = () => {
 	const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -53,8 +53,6 @@ const Services = () => {
 		<div className="w-full text-center mx-auto pt-20XXX relative XXX-mt-96">
 			<Loader />
 
-			<Countries />
-
 			<span className="-mt-24 w-[296px] flex mx-auto p-4">
 				<StyledButton name="Show modal" onClick={openModal} />
 			</span>
@@ -74,6 +72,10 @@ const Services = () => {
 				<StyledButton name="Chevron-Right" />
 				<StyledButton name="Chevron" chevron={false} center />
 			</div>
+
+      <div className="mt-16">
+            <DataTable />
+      </div>
 
 			<Typography text={t("services.label")} className="mt-10" variant="h3" />
 			<div id="title-line" className="w-28 h-1 bg-white mx-auto" />

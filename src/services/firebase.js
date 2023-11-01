@@ -1,6 +1,6 @@
+import { getFirestore, doc, setDoc, query, where, collection, getDocs, getDoc } from "firebase/firestore/lite"
 import { initializeApp } from "firebase/app"
 import firebaseConfig from "./firebaseConfig"
-import { getFirestore, doc, setDoc, query, where, collection, getDocs } from "firebase/firestore/lite"
 
 const firebase = initializeApp(firebaseConfig)
 const firestore = getFirestore(firebase)
@@ -20,14 +20,30 @@ export const addData = async (path, data) => {
 	return { result, error }
 }
 
-export const getData = async (path) => {
-	try {
-		const collectionData = collection(firestore, path)
-		const queryData = query(collectionData, where("id", ">", 0))
-		const docsData = await getDocs(queryData)
-		console.log(docsData)
+/*
+    import { addData, getData } from "@/services/firebase"
+    const handleForm = async () => {
+		const data = dbData["NS-Products"]["Equipment"]
 
-		result = docsData.docs.map((doc) => doc.data())
+		const { result, error } = await addData("NS-Products/Equipment", data)
+
+		console.log(error)
+		if (error) {
+			return console.log(error)
+		}
+	}
+*/
+
+export const getData = async (coll, docu) => {
+	let result = null,
+		error = null
+
+	try {
+		const collectionData = doc(firestore, coll, docu)
+		//const queryData = query(collectionData, where("id", ">", 0))
+		const docsData = await getDoc(collectionData)
+
+		result = docsData.data()//.docs.map((doc) => doc.data())
 	} catch (e) {
 		error = e
 	}
