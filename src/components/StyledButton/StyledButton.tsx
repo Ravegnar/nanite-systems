@@ -14,6 +14,7 @@ interface IButtonLinkProps {
 	revert?: boolean
 	center?: boolean
 	size?: string
+	isDisabled?: boolean
 	onClick?: any
 }
 
@@ -26,7 +27,8 @@ const StyledButton = ({
 	icon,
 	revert = false,
 	center = false,
-	size = "normal",
+	size = "w-full",
+	isDisabled = false,
 	onClick
 }: IButtonLinkProps) => {
 	const { getTheme, setTheme } = useContext(AppContext)
@@ -143,8 +145,9 @@ const StyledButton = ({
 			<button
 				ref={buttonRef}
 				type="button"
+				disabled={isDisabled}
 				onClick={onClick}
-				className={`relative w-full flex ${revert ? "flex-row-reverse" : ""} items-center ${
+				className={`relative ${size} flex ${revert ? "flex-row-reverse" : ""} items-center ${
 					center ? "justify-center" : ""
 				} z-10 px-4 py-3 whitespace-nowrap ${classses}`}
 			>
