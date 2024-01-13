@@ -9,6 +9,8 @@ const AboutUs = () => {
 	console.log("test")
 	console.log("main")
 
+	console.log("main")
+
 	return (
 		<div className="w-full max-w-7xl text-center mx-auto pt-20">
 			<Typography text={t("aboutUs.label")} className="" variant="h3" />
