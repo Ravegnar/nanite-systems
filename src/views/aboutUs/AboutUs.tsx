@@ -5,7 +5,7 @@ import aboutUsData from "@/lib/aboutUsData"
 const AboutUs = () => {
 	const { t } = useTranslation()
 
-	console.log("test")
+	console.log("TEST")
 	console.log("main")
 
 	console.log("TEST")
