@@ -5,6 +5,7 @@ import aboutUsData from "@/lib/aboutUsData"
 const AboutUs = () => {
 	const { t } = useTranslation()
 
+	console.log("test")
 	return (
 		<div className="w-full max-w-7xl text-center mx-auto pt-20">
 			<Typography text={t("aboutUs.label")} className="" variant="h3" />
