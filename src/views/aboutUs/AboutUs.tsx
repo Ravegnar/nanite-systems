@@ -5,6 +5,8 @@ import aboutUsData from "@/lib/aboutUsData"
 const AboutUs = () => {
 	const { t } = useTranslation()
 
+	console.log("main")
+
 	console.log("TEST")
 	return (
 		<div className="w-full max-w-7xl text-center mx-auto pt-20">
