@@ -1,5 +1,37 @@
-import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
+import { useRive, Layout, Fit, Alignment, useStateMachineInput, EventType, RiveEventType } from "@rive-app/react-canvas";
+
+export const RiveDemo = () => {
+  const { rive, RiveComponent } = useRive({
+    src: "Archer.riv",
+    artboard: "Archer",
+    stateMachines: "Archer",
+    layout: new Layout({
+      fit: Fit.Contain, // Change to: rive.Fit.Contain, Cover, FitWidth
+      alignment: Alignment.Center,
+    }),
+    autoplay: true,
+  });
+  
+  const shoot = useStateMachineInput(
+	rive,
+	"Archer",
+	'Shoot'
+)
+	const run = useStateMachineInput(
+	rive,
+	"Archer",
+	'Run'
+	)
+
+  return (<>
+   	<RiveComponent />
+	<button type="button" className="px-2" onClick={() => run && (run.value = !run.value)}>Run</button>
+	<button type="button" className="px-2" onClick={() => shoot && shoot.fire()}>Shoot</button>
+   </>)
+  
+};
+
 
 interface IButtonLinkProps {
 	name?: string
@@ -52,6 +84,10 @@ const Loader = ({}: IButtonLinkProps) => {
 
 	return (
 		<>
+			<div className="relative w-auto container mx-auto -mt-[100px] mb-36 h-[520px]">
+				<RiveDemo />
+			</div>
+
 			<div className="relative w-96 h-96 bg-green-900xx mx-auto XXX hidden">
 				<div className="absolute w-[34%] h-1/2x h-[90%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-teal-500 mx-auto rotate-[0deg]"></div>
 				<div className="absolute w-[34%] h-1/2x h-[90%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-teal-500 mx-auto rotate-[90deg]"></div>
